@@ -1,0 +1,29 @@
+.tpl-amazeui-form{
+    padding-top: 20px;
+    background: #ffffff;
+}
+.YzCode{
+    margin: 10px auto;
+    padding: 30px auto;
+    background: red;
+}
+
+.am-form-group{
+    margin-bottom: 10px!important;
+}
+
+.register-btn{
+    background: #57e6a4;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 60px;
+    padding: 5px 20px;
+    border: 0 none;
+    outline: none;
+}
+
+.register-btn:hover{
+    background: #57dee6;
+    transition: all 1s;
+    color: #ffffff;
+}
