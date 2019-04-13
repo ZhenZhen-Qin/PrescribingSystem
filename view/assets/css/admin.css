@@ -371,3 +371,49 @@ gallery.html css
   width: 200px;
   margin: 0 auto;
 }
+
+#pwd-tips{
+  font-size: 12px;padding-left: 20px;
+  color: #e4393c;
+}
+#pwd-tips1{
+  font-size: 12px;padding-left: 20px;
+  color: #e4393c;
+}
+
+.user-list-total{
+  margin-left: 20px;
+  color: #32c5d2;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+#goback-manage-admin{
+  float: right;
+  background: #32c5d2;
+  outline: none;
+  color: #ffffff;
+  border: none 0;
+  padding: 4px 10px;
+}
+
+.set-pagesize{
+  width: 200px;
+  display: flex;
+  font-size: 14px;
+  height: 29px;
+  line-height: 29px;
+}
+
+.set-pagesize input:nth-child(1){
+  width: 40px!important;
+  border-bottom: 1px solid #dddddd;
+}
+.set-pagesize input:last-child{
+  background: #58bc58;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0 13px;
+  margin-left: 4px;
+}
+

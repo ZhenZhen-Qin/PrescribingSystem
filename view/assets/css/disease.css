@@ -1,0 +1,54 @@
+.sex{
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#add-disease-back-btn{
+    float: right;
+    margin-right:50px;
+}
+.find-diseaseinfo-by-type-box{
+    display: flex;
+}
+
+#find-by-disease-btn{
+    background: #3bb4f2;
+    font-size: 12px;
+    width: 100px;
+}
+
+.disease-list-total{
+    margin-left: 20px;
+    color: #32c5d2;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.choose-care{
+    display: flex;
+
+}
+
+.choose-care li{
+    margin: 2px;
+    padding:5px 7px;
+    background: skyblue;
+    font-size: 14px;
+    color: #ffffff;
+}
+.choose-care li:nth-child(1){
+    background: #0e90d2;
+}
+
+#histroy-medicine{
+    display: none;
+}
+#yaodian{
+    display: none;
+}
+
+.choose-btn{
+    padding:5px 10px;
+    color: #ffffff;
+    background: #e4393c;
+}

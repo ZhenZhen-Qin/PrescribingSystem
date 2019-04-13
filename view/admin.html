@@ -99,7 +99,7 @@
 
             <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
                 <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
-                    <span class="tpl-header-list-user-nick">覃医生</span><span class="tpl-header-list-user-ico"> <img
+                    <span id="admin-name" class="tpl-header-list-user-nick">覃医生</span><span class="tpl-header-list-user-ico"> <img
                         src="assets/img/user01.png"></span>
                 </a>
                 <ul class="am-dropdown-content">
@@ -122,7 +122,7 @@
         <div class="tpl-left-nav-list">
             <ul class="tpl-left-nav-menu">
                 <li class="tpl-left-nav-item">
-                    <a href="index.html" class="nav-link active">
+                    <a href="index.html" class="nav-link">
                         <i class="am-icon-home"></i>
                         <span>首页</span>
                     </a>
@@ -162,7 +162,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="tpl-left-nav-item">
+                <li class="tpl-left-nav-item" id="admin-manage">
                     <a href="admin.html" class="nav-link active">
                         <i class="am-icon-cog"></i>
                         <span>普通管理员管理</span>
@@ -184,17 +184,10 @@
         </ol>
 
 
-        <div class="tpl-portlet-components">
+        <div id="manage-admin" class="tpl-portlet-components">
             <div class="portlet-title">
                 <div class="caption font-green bold">
                     <span class="am-icon-code"></span> 普通管理员管理
-                </div>
-                <div class="tpl-portlet-input tpl-fz-ml">
-                    <div class="portlet-input input-small input-inline">
-                        <div class="input-icon right">
-                            <i class="am-icon-search"></i>
-                            <input type="text" class="form-control form-control-solid" placeholder="搜索..."></div>
-                    </div>
                 </div>
             </div>
             <div class="tpl-block">
@@ -202,39 +195,29 @@
                     <div class="am-u-sm-12 am-u-md-6">
                         <div class="am-btn-toolbar">
                             <div class="am-btn-group am-btn-group-xs">
-                                <button type="button" class="am-btn am-btn-default am-btn-success"><span
+                                <button id="add-admin-btn" type="button" class="am-btn am-btn-default am-btn-success"><span
                                         class="am-icon-plus"></span> 新增
                                 </button>
-                                <!--<button type="button" class="am-btn am-btn-default am-btn-secondary"><span-->
-                                <!--class="am-icon-save"></span> 保存-->
-                                <!--</button>-->
-                                <!--<button type="button" class="am-btn am-btn-default am-btn-warning"><span-->
-                                <!--class="am-icon-archive"></span> 审核-->
-                                <!--</button>-->
-                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span
-                                        class="am-icon-trash-o"></span> 删除
+                                <button id="more-remove" type="button" class="am-btn am-btn-default am-btn-danger"><span
+                                        class="am-icon-trash-o"></span> 批量删除
                                 </button>
+                                <span class="user-list-total"></span>
                             </div>
                         </div>
                     </div>
                     <div class="am-u-sm-12 am-u-md-3">
-                        <div class="am-form-group">
-                            <select data-am-selected="{btnSize: 'sm'}">
-                                <option value="option1">所有类别</option>
-                                <option value="option2">IT业界</option>
-                                <option value="option3">数码产品</option>
-                                <option value="option3">笔记本电脑</option>
-                                <option value="option3">平板电脑</option>
-                                <option value="option3">只能手机</option>
-                                <option value="option3">超极本</option>
-                            </select>
+                        <div class="set-pagesize">
+                            每页显示
+                            <input type="number"  id="set-pagesize-val">
+                            条数据
+                            <input type="button" value="设置" id="set-pagesize-btn">
                         </div>
                     </div>
                     <div class="am-u-sm-12 am-u-md-3">
                         <div class="am-input-group am-input-group-sm">
-                            <input type="text" class="am-form-field">
+                            <input id="find-key-word" type="text" class="am-form-field" placeholder="关键字查找...">
                             <span class="am-input-group-btn">
-            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search"
+                                <button id="find-key-word-btn" class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search"
                     type="button"></button>
           </span>
                         </div>
@@ -242,70 +225,41 @@
                 </div>
                 <div class="am-g">
                     <div class="am-u-sm-12">
-                        <form class="am-form">
+                        <div class="am-form">
                             <table class="am-table am-table-striped am-table-hover table-main">
                                 <thead>
                                 <tr>
-                                    <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
+                                    <th class="table-check"><input type="checkbox" id="all-checkbok" class="tpl-table-fz-check"></th>
                                     <th class="table-id">序号</th>
                                     <th class="table-id">工号ID</th>
                                     <th class="table-title">姓名</th>
                                     <th class="table-title">电话</th>
                                     <th class="table-title">邮箱</th>
                                     <th class="table-type">类别</th>
-                                    <th class="table-author am-hide-sm-only">部门</th>
+                                    <!--<th class="table-author am-hide-sm-only">部门</th>-->
                                     <th class="table-date am-hide-sm-only">密码</th>
                                     <th class="table-date am-hide-sm-only">操作</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>1</td>
-                                    <td>20152191</td>
-                                    <td><a href="#">覃珍珍</a></td>
-                                    <td>18802097077</td>
-                                    <td>1484052517@qq.com</td>
-                                    <td>超级管理员</td>
-                                    <td class="am-hide-sm-only">主治医生</td>
-                                    <td class="am-hide-sm-only">123456</td>
-                                    <td>
-                                        <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs">
-                                                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span
-                                                        class="am-icon-pencil-square-o"></span> 编辑
-                                                </button>
-                                                <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">
-                                                    <span class="am-icon-trash-o"></span> 删除
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <tbody id="user-list">
+
                                 </tbody>
                             </table>
                             <div class="am-cf">
-
                                 <div class="am-fr">
-                                    <ul class="am-pagination tpl-pagination">
-                                        <li class="am-disabled"><a href="#">«</a></li>
-                                        <li class="am-active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">»</a></li>
+                                    <ul class="am-pagination tpl-pagination page">
+                                       <!--页码-->
                                     </ul>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- 新增管理员-->
-        <div class="tpl-portlet-components" id="add-disease">
+        <div id="add-admin" class="tpl-portlet-components">
             <div class="portlet-title">
                 <div class="caption font-green bold">
                     <span class="am-icon-code"></span> 新增管理员
@@ -316,55 +270,56 @@
                     <div class="am-u-sm-12 am-u-md-9">
                         <form class="am-form am-form-horizontal">
                             <div class="am-form-group">
-                                <label for="user-name" class="am-u-sm-3 am-form-label">工号ID / User id</label>
+                                <label for="jobNumber" class="am-u-sm-3 am-form-label">工号ID / User id</label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" id="user-name" placeholder="工号ID / User id">
+                                    <input type="number" id="jobNumber" placeholder="工号ID / User id">
 
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-email" class="am-u-sm-3 am-form-label">姓名 / Name</label>
+                                <label for="userName" class="am-u-sm-3 am-form-label">姓名 / Name</label>
                                 <div class="am-u-sm-9">
-                                    <input type="email" id="user-email" placeholder="姓名 / Name">
+                                    <input type="email" id="userName" placeholder="姓名 / Name">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-phone" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
+                                <label for="mobileNumber" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
                                 <div class="am-u-sm-9">
-                                    <input type="tel" id="user-phone" placeholder="输入电话号码 / Telephone">
+                                    <input type="tel" id="mobileNumber" placeholder="输入电话号码 / Telephone">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-job" class="am-u-sm-3 am-form-label">邮箱 / E-mail</label>
+                                <label for="E-mail" class="am-u-sm-3 am-form-label">邮箱 / E-mail</label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" id="user-job" placeholder="邮箱 / E-mail">
+                                    <input type="text" id="E-mail" placeholder="邮箱 / E-mail">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="password" class="am-u-sm-3 am-form-label">密码 / password</label>
+                                <label for="userPassword" class="am-u-sm-3 am-form-label">密码 / password</label>
                                 <div class="am-u-sm-9">
-                                    <input type="password" id="password" placeholder="密码 / password">
+                                    <input type="password" id="userPassword" placeholder="密码 / password">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="password" class="am-u-sm-3 am-form-label">确认密码 /Confirm password</label>
+                                <label for="confirmPassword" class="am-u-sm-3 am-form-label">确认密码 /Confirm password</label>
                                 <div class="am-u-sm-9">
-                                    <input type="password" id="password" placeholder="确认密码 /Confirm password">
+                                    <input type="password" id="confirmPassword" placeholder="确认密码 /Confirm password">
                                 </div>
+                                <span id="pwd-tips"></span>
                             </div>
 
                             <div class="am-form-group">
                                 <label for="password" class="am-u-sm-3 am-form-label"></label>
                                 <div class="am-u-sm-9">
-                                    <button type="button" class="am-btn am-btn-default am-btn-secondary"><span
+                                    <button id="add-admin-save-btn" type="button" class="am-btn am-btn-default am-btn-secondary"><span
                                             class="am-icon-save"></span> 保存
                                     </button>
-                                    <button type="button" class="am-btn am-btn-default am-btn-danger"><span
+                                    <button id="cannel-add-btn" type="button" class="am-btn am-btn-default am-btn-danger"><span
                                             class="am-icon-trash-o"></span> 取消
                                     </button>
                                 </div>
@@ -379,12 +334,96 @@
 
         </div>
 
+        <!-- 修改管理员-->
+        <div id="update-admin" class="tpl-portlet-components">
+            <div class="portlet-title">
+                <div class="caption font-green bold">
+                    <span class="am-icon-code"></span> 修改管理员信息
+                </div>
+                <div>
+                    <button id="goback-manage-admin" type="button"><span
+                            class="am-icon-sign-out"></span> 返回
+                    </button>
+                </div>
+            </div>
+            <div class="tpl-block ">
+                <div class="am-g tpl-amazeui-form">
+                    <div class="am-u-sm-12 am-u-md-9">
+                        <form class="am-form am-form-horizontal">
+                            <div class="am-form-group">
+                                <label for="jobNumber1" class="am-u-sm-3 am-form-label">工号ID / User id</label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" id="jobNumber1" placeholder="工号ID / User id">
+
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="userName1" class="am-u-sm-3 am-form-label">姓名 / Name</label>
+                                <div class="am-u-sm-9">
+                                    <input type="email" id="userName1" placeholder="姓名 / Name">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="mobileNumber1" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
+                                <div class="am-u-sm-9">
+                                    <input type="tel" id="mobileNumber1" placeholder="输入电话号码 / Telephone">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="E-mail1" class="am-u-sm-3 am-form-label">邮箱 / E-mail</label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" id="E-mail1" placeholder="邮箱 / E-mail">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="userPassword1" class="am-u-sm-3 am-form-label">密码 / password</label>
+                                <div class="am-u-sm-9">
+                                    <input type="password" id="userPassword1" placeholder="密码 / password">
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="confirmPassword1" class="am-u-sm-3 am-form-label">确认密码 /Confirm password</label>
+                                <div class="am-u-sm-9">
+                                    <input type="password" id="confirmPassword1" placeholder="确认密码 /Confirm password">
+                                </div>
+                                <span id="pwd-tips1"></span>
+                            </div>
+
+                            <div class="am-form-group userTypeCheckbox">
+                                <label for="userTypeCheckbox" class="am-u-sm-3 am-form-label"></label>
+                                <div class="am-u-sm-9">
+                                    <input type="checkbox" id="userTypeCheckbox" /><span>是否授予超级管理员的权限</span>
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="password" class="am-u-sm-3 am-form-label"></label>
+                                <div class="am-u-sm-9">
+                                    <button id="admin-update-btn" type="button" class="am-btn am-btn-default am-btn-secondary"><span
+                                            class="am-icon-save"></span> 修改
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 
             <script src="assets/js/jquery.min.js"></script>
             <script src="assets/js/amazeui.min.js"></script>
-            <script src="assets/js/iscroll.js"></script>
-            <script src="assets/js/app.js"></script>
+            <script src="assets/js/jquery.cookie.js"></script>
+            <script src="assets/js/myjs/common.js"></script>
+            <script src="assets/js/myjs/admin.js"></script>
+            <!--<script src="assets/js/iscroll.js"></script>-->
+            <!--<script src="assets/js/app.js"></script>-->
 
 </body>
 

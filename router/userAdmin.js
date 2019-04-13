@@ -76,7 +76,6 @@ Router.post('/findUserInfoByAll',(req,res)=>{
  * @apiGroup user
  *
  * @apiParam {String} jobNumber 工号
- * @apiParam {String} userName
  *
  * @apiSuccess {Number} err 错误码 0：ok  -1 失败
  * @apiSuccess {String} msg  结果信息
@@ -186,8 +185,6 @@ Router.post('/checkUserLogin',(req,res)=>{
  * @apiSuccess {String} data  返回数据
  */
 Router.post("/updateUserInfo",(req,res)=>{
-    let id =req.body._id;
-    console.log(id)
     let {jobNumber, userName, userPassword, mobileNumber, Email, userType,department,joinTime} = req.body;
     User.updateOne({jobNumber:jobNumber},{$set:{userName, userPassword, mobileNumber, Email, userType,department,joinTime}})
         .then((data)=>{
@@ -223,6 +220,48 @@ Router.post('/removeUserInfo',(req,res)=>{
             console.log(err);
             res.send({err:-1,msg:"delete error",data:null})
         })
+});
+
+/**
+ * @api {post} /user/removeUserInfoMany removeUserInfoMany
+ * @apiName removeUserInfoMany
+ * @apiGroup user
+ *
+ * @apiParam {Array} jobNumberArr 工号数组
+ *
+ * @apiSuccess {Number} err 错误码 0：ok  -1 失败
+ * @apiSuccess {String} msg  结果信息
+ * @apiSuccess {String} data  返回数据
+ */
+Router.post('/removeUserInfoMany',(req,res)=>{
+    let {jobNumberArr,pagesize,page} = req.body;
+    // User.deleteMany({jobNumber:{$in:[jobNumberArr.split('-')]}})
+    //     .then((data)=>{
+    //         console.log(data)
+    //         res.send({err:0,msg:"delete many success",data:null})
+    //     })
+    //     .catch((err)=>{
+    //         console.log(err);
+    //         res.send({err:-1,msg:"delete many error",data:null})
+    //     })
+    try{
+        jobNumberArr.split('-').forEach((item,idx)=>{
+            User.deleteOne({jobNumber:item})
+                .then((data)=>{
+                    console.log(data)
+                    if (idx+1 === jobNumberArr.split('-').length){
+                        res.send({err:0,msg:"delete success",data:null})
+                    }
+                })
+                .catch((err)=>{
+                    console.log(err);
+                    return ;
+                })
+        })
+    }catch (e) {
+        res.send({err:-1,msg:"delete error",data:null})
+    }
+
 });
 
 module.exports=Router;

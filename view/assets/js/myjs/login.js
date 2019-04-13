@@ -18,5 +18,4 @@ $('#login-btn').on('click',()=>{
             window.location.href = 'http://localhost:3000/index.html';
         }
     })
-
 })

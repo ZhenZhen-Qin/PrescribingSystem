@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/amazeui.min.css"/>
     <link rel="stylesheet" href="assets/css/admin.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/disease.css">
 </head>
 
 <body data-type="generalComponents">
@@ -99,7 +100,7 @@
 
             <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
                 <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
-                    <span class="tpl-header-list-user-nick">覃医生</span><span class="tpl-header-list-user-ico"> <img
+                    <span id="admin-name" class="tpl-header-list-user-nick">覃医生</span><span class="tpl-header-list-user-ico"> <img
                         src="assets/img/user01.png"></span>
                 </a>
                 <ul class="am-dropdown-content">
@@ -108,7 +109,7 @@
                     <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
                 </ul>
             </li>
-            <li><a href="###" class="tpl-header-list-link"><span
+            <li><a href="./login.html" class="tpl-header-list-link"><span
                     class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
         </ul>
     </div>
@@ -122,18 +123,18 @@
         <div class="tpl-left-nav-list">
             <ul class="tpl-left-nav-menu">
                 <li class="tpl-left-nav-item">
-                    <a href="index.html" class="nav-link active">
+                    <a href="index.html" class="nav-link">
                         <i class="am-icon-home"></i>
                         <span>首页</span>
                     </a>
                 </li>
                 <li class="tpl-left-nav-item">
-                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                    <a href="javascript:;" class="nav-link tpl-left-nav-link-list active">
                         <i class="am-icon-bar-chart"></i>
                         <span>病患信息</span>
                         <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
                     </a>
-                    <ul class="tpl-left-nav-sub-menu">
+                    <ul class="tpl-left-nav-sub-menu" style="display: block;">
                         <li>
                             <a href="disease-info.html">
                                 <i class="am-icon-angle-right"></i>
@@ -150,7 +151,7 @@
                         <span>药品信息</span>
                         <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
                     </a>
-                    <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                    <ul class="tpl-left-nav-sub-menu">
                         <li>
                             <a href="medicinal-manage.html">
                                 <i class="am-icon-angle-right"></i>
@@ -163,7 +164,7 @@
                     </ul>
                 </li>
 
-                <li class="tpl-left-nav-item">
+                <li class="tpl-left-nav-item" id="admin-manage">
                     <a href="admin.html" class="nav-link tpl-left-nav-link-list">
                         <i class="am-icon-cog"></i>
                         <span>普通管理员管理</span>
@@ -173,10 +174,9 @@
         </div>
     </div>
 
-
     <div class="tpl-content-wrapper">
 
-        <div class="tpl-portlet-components">
+        <div class="tpl-portlet-components" id="disease-manage">
             <div class="portlet-title">
                 <div class="caption font-green bold">
                     <span class="am-icon-code"></span> 病患信息管理
@@ -184,7 +184,7 @@
                 <div class="tpl-portlet-input tpl-fz-ml">
                     <div class="portlet-input input-small input-inline">
                         <div class="input-icon right">
-                            <i class="am-icon-search"></i>
+                            <i class="am-icon-search" id="find-disease-id-btn"></i>
                             <input type="text" class="form-control form-control-solid" placeholder="根据身份证号查找病患信息...">
                         </div>
                     </div>
@@ -195,47 +195,51 @@
                     <div class="am-u-sm-12 am-u-md-6">
                         <div class="am-btn-toolbar">
                             <div class="am-btn-group am-btn-group-xs">
-                                <button type="button" class="am-btn am-btn-default am-btn-success"><span
+                                <button id="new-add-disease" type="button" class="am-btn am-btn-default am-btn-success"><span
                                         class="am-icon-plus"></span> 新增
                                 </button>
-                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span
+                                <button id="find-by-disease-all-btn" type="button" class="am-btn am-btn-default am-btn-secondary"><span
                                         class="am-icon-search"></span> 查找所有
                                 </button>
-                                <!--<button type="button" class="am-btn am-btn-default am-btn-warning"><span-->
-                                        <!--class="am-icon-archive"></span> 审核-->
-                                <!--</button>-->
-                                <!--<button type="button" class="am-btn am-btn-default am-btn-danger"><span-->
-                                        <!--class="am-icon-trash-o"></span> 删除-->
-                                <!--</button>-->
+
+                                <button id="more-remove" type="button" class="am-btn am-btn-default am-btn-danger"><span
+                                        class="am-icon-trash-o"></span> 批量删除
+                                </button>
+                                <span class="disease-list-total"></span>
                             </div>
                         </div>
                     </div>
                     <div class="am-u-sm-12 am-u-md-3">
-                        <div class="am-form-group">
-                            <select data-am-selected="{btnSize: 'sm'}">
-                                <option value="option1">所有类别</option>
-                                <option value="option2">感觉障碍</option>
-                                <option value="option3">知觉障碍</option>
-                                <option value="option4">注意障碍</option>
-                                <option value="option5">记忆障碍</option>
-                                <option value="option6">思维障碍</option>
-                                <option value="option7">情感障碍</option>
-                                <option value="option8">意志障碍</option>
-                                <option value="option9">行为障碍</option>
-                                <option value="option10">意识障碍</option>
-                                <option value="option11">智力障碍</option>
-                                <option value="option12">人格障碍</option>
+                        <div class="am-form-group find-diseaseinfo-by-type-box">
+                            <select data-am-selected="{btnSize: 'sm'}" class="find-diseaseinfo-by-type">
+                                <option value="1">其他类别</option>
+                                <option value="2">感觉障碍</option>
+                                <option value="3">知觉障碍</option>
+                                <option value="4">注意障碍</option>
+                                <option value="5">记忆障碍</option>
+                                <option value="6">思维障碍</option>
+                                <option value="7">情感障碍</option>
+                                <option value="8">意志障碍</option>
+                                <option value="9">行为障碍</option>
+                                <option value="10">意识障碍</option>
+                                <option value="11">智力障碍</option>
+                                <option value="12">人格障碍</option>
                             </select>
+                            <button id="find-by-disease-btn" type="button" class="am-btn am-btn-default am-btn-secondary">
+                                <span class="am-icon-search"></span>
+                                查找该类别
+                            </button>
                         </div>
+
                     </div>
                 </div>
                 <div class="am-g">
                     <div class="am-u-sm-12">
-                        <form class="am-form">
+                        <div class="am-form">
                             <table class="am-table am-table-striped am-table-hover table-main">
                                 <thead>
                                 <tr>
-                                    <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
+                                    <th class="table-check"><input id="all-checkbok" type="checkbox" class="tpl-table-fz-check"></th>
                                     <th class="table-id">序号</th>
                                     <th class="table-type">身份证号</th>
                                     <th class="table-title">姓名</th>
@@ -245,51 +249,19 @@
                                     <th class="table-set">操作</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr>
-                                    <td><input type="checkbox"></td>
-                                    <td>1</td>
-                                    <td><a href="#">452106199703082167</a></td>
-                                    <td>胡大大</td>
-                                    <td class="am-hide-sm-only">思维障碍</td>
-                                    <td class="am-hide-sm-only">2014年9月4日 7:28:47</td>
-                                    <td class="am-hide-sm-only">阿莫西林</td>
-                                    <td>
-                                        <div class="am-btn-toolbar">
-                                            <div class="am-btn-group am-btn-group-xs">
-                                                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span
-                                                        class="am-icon-star-o"></span> 查看详细信息
-                                                </button>
-                                                <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span
-                                                        class="am-icon-pencil-square-o"></span> 开药
-                                                </button>
-                                                <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">
-                                                    <span class="am-icon-trash-o"></span> 删除
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <tbody id="diseaseList">
+
 
                                 </tbody>
                             </table>
                             <div class="am-cf">
-
                                 <div class="am-fr">
-                                    <ul class="am-pagination tpl-pagination">
-                                        <li class="am-disabled"><a href="#">«</a></li>
-                                        <li class="am-active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#">»</a></li>
+                                    <ul class="am-pagination tpl-pagination page">
                                     </ul>
                                 </div>
                             </div>
-                            <hr>
-
-                        </form>
+                            <hr />
+                        </div>
                     </div>
 
                 </div>
@@ -303,37 +275,54 @@
                 <div class="caption font-green bold">
                     <span class="am-icon-code"></span> 新增病患信息
                 </div>
+                <button id="add-disease-back-btn" type="button" class="am-btn am-btn-secondary">返回</button>
             </div>
             <div class="tpl-block ">
                 <div class="am-g tpl-amazeui-form">
                     <div class="am-u-sm-12 am-u-md-9">
                         <form class="am-form am-form-horizontal">
                             <div class="am-form-group">
-                                <label for="user-name" class="am-u-sm-3 am-form-label">姓名 / Name</label>
+                                <label for="add-user-name" class="am-u-sm-3 am-form-label">姓名 / Name</label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" id="user-name" placeholder="姓名 / Name">
-
+                                    <input type="text" id="add-user-name" placeholder="姓名 / Name">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-email" class="am-u-sm-3 am-form-label">身份证号 / ID Care</label>
+                                <label for="add-user-id" class="am-u-sm-3 am-form-label">身份证号 / ID Care</label>
                                 <div class="am-u-sm-9">
-                                    <input type="email" id="user-email" placeholder="输入你的身份证号 / ID Care">
+                                    <input type="text" id="add-user-id" placeholder="输入身份证号 / ID Care">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-phone" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
+                                <label for="add-user-phone" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
                                 <div class="am-u-sm-9">
-                                    <input type="tel" id="user-phone" placeholder="输入电话号码 / Telephone">
+                                    <input type="tel" id="add-user-phone" placeholder="输入电话号码 / Telephone">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-job" class="am-u-sm-3 am-form-label">职业 / Job</label>
+                                <label for="add-user-sex" class="am-u-sm-3 am-form-label">性别 / Sex</label>
+                                <div class="am-u-sm-9 sex-box">
+                                    <input class="sex-radio" type="radio" id="add-user-sex-male" name="sex" value="1" checked/>
+                                    <label for="add-user-sex-male" class="sex">男</label>
+                                    <input class="sex-radio" type="radio" id="add-user-sex-female" name="sex" value="0"/>
+                                    <label class="sex" for="add-user-sex-female">女</label>
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="add-user-day" class="am-u-sm-3 am-form-label">出生年月日 / Birthday</label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" id="user-job" placeholder="输入职业 / Job">
+                                    <input type="Date" id="add-user-day" >
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="add-user-job" class="am-u-sm-3 am-form-label">职业 / Job</label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" id="add-user-job" placeholder="输入职业 / Job">
                                 </div>
                             </div>
 
@@ -342,28 +331,28 @@
                                 <label for="user-QQ" class="am-u-sm-3 am-form-label">所属类别 / Type</label>
                                 <div class="am-u-sm-9">
                                     <div class="am-form-group">
-                                        <select data-am-selected="{btnSize: 'sm'}">
-                                            <option value="option1">所有类别</option>
-                                            <option value="option2">感觉障碍</option>
-                                            <option value="option3">知觉障碍</option>
-                                            <option value="option4">注意障碍</option>
-                                            <option value="option5">记忆障碍</option>
-                                            <option value="option6">思维障碍</option>
-                                            <option value="option7">情感障碍</option>
-                                            <option value="option8">意志障碍</option>
-                                            <option value="option9">行为障碍</option>
-                                            <option value="option10">意识障碍</option>
-                                            <option value="option11">智力障碍</option>
-                                            <option value="option12">人格障碍</option>
+                                        <select data-am-selected="{btnSize: 'sm'}" class="select-disease-type">
+                                            <option value="1">其他类别</option>
+                                            <option value="2">感觉障碍</option>
+                                            <option value="3">知觉障碍</option>
+                                            <option value="4">注意障碍</option>
+                                            <option value="5">记忆障碍</option>
+                                            <option value="6">思维障碍</option>
+                                            <option value="7">情感障碍</option>
+                                            <option value="8">意志障碍</option>
+                                            <option value="9">行为障碍</option>
+                                            <option value="10">意识障碍</option>
+                                            <option value="11">智力障碍</option>
+                                            <option value="12">人格障碍</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="allergy-drugs" class="am-u-sm-3 am-form-label">过敏药物 / Allergy drugs</label>
+                                <label for="add-allergy-drugs" class="am-u-sm-3 am-form-label">过敏药物 / Allergy drugs</label>
                                 <div class="am-u-sm-9">
-                                    <textarea class="" rows="5" id="allergy-drugs" placeholder="输入病患的过敏药物"></textarea>
+                                    <textarea class="" rows="5" id="add-allergy-drugs" placeholder="输入病患的过敏药物"></textarea>
                                     <small>写出病患的过敏药物</small>
                                 </div>
                             </div>
@@ -371,9 +360,7 @@
 
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3">
-                                    <button type="button" class="am-btn am-btn-primary">保存</button>
-                                    <button type="button" class="am-btn am-btn-secondary">取消</button>
-
+                                    <button id="add-disease-btn" type="button" class="am-btn am-btn-primary">保存</button>
                                 </div>
                             </div>
                         </form>
@@ -383,174 +370,200 @@
 
         </div>
 
-        <div class="tpl-block ">
-            <div class="am-g tpl-amazeui-form">
-                <div class="am-u-sm-12 am-u-md-9">
-                    <form class="am-form am-form-horizontal">
-                        <div class="am-form-group">
-                            <label for="user-name" class="am-u-sm-3 am-form-label">工号ID / User id</label>
-                            <div class="am-u-sm-9">
-                                <input type="text" id="user-name" placeholder="工号ID / User id">
-
-                            </div>
-                        </div>
-
-                        <div class="am-form-group">
-                            <label for="user-email" class="am-u-sm-3 am-form-label">姓名 / Name</label>
-                            <div class="am-u-sm-9">
-                                <input type="email" id="user-email" placeholder="姓名 / Name">
-                            </div>
-                        </div>
-
-                        <div class="am-form-group">
-                            <label for="user-phone" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
-                            <div class="am-u-sm-9">
-                                <input type="tel" id="user-phone" placeholder="输入电话号码 / Telephone">
-                            </div>
-                        </div>
-
-                        <div class="am-form-group">
-                            <label for="user-job" class="am-u-sm-3 am-form-label">邮箱 / E-mail</label>
-                            <div class="am-u-sm-9">
-                                <input type="text" id="user-job" placeholder="邮箱 / E-mail">
-                            </div>
-                        </div>
-
-                        <div class="am-form-group">
-                            <label for="password" class="am-u-sm-3 am-form-label">密码 / password</label>
-                            <div class="am-u-sm-9">
-                                <input type="password" id="password" placeholder="密码 / password">
-                            </div>
-                        </div>
-
-                        <div class="am-form-group">
-                            <label for="password" class="am-u-sm-3 am-form-label">确认密码 /Confirm password</label>
-                            <div class="am-u-sm-9">
-                                <input type="password" id="password" placeholder="确认密码 /Confirm password">
-                            </div>
-                        </div>
-
-                        <div class="am-form-group">
-                            <label for="password" class="am-u-sm-3 am-form-label"></label>
-                            <div class="am-u-sm-9">
-                                <button type="button" class="am-btn am-btn-default am-btn-secondary"><span
-                                        class="am-icon-save"></span> 保存
-                                </button>
-                                <button type="button" class="am-btn am-btn-default am-btn-danger"><span
-                                        class="am-icon-trash-o"></span> 取消
-                                </button>
-                            </div>
-                        </div>
-
-
-
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <!--给病患开药-->
-        <div class="tpl-portlet-components" id="prescribing-drugs">
+        <!--修改病患信息-->
+        <div class="tpl-portlet-components" id="update-disease">
             <div class="portlet-title">
                 <div class="caption font-green bold">
-                    <span class="am-icon-code"></span> 为病患开药
+                    <span class="am-icon-code"></span> 病患信息
                 </div>
             </div>
             <div class="tpl-block ">
-
                 <div class="am-g tpl-amazeui-form">
-
-
                     <div class="am-u-sm-12 am-u-md-9">
                         <form class="am-form am-form-horizontal">
                             <div class="am-form-group">
-                                <label for="user-name" class="am-u-sm-3 am-form-label">姓名 / Name</label>
+                                <label for="update-disease-name" class="am-u-sm-3 am-form-label">姓名 / Name</label>
                                 <div class="am-u-sm-9">
-                                    <input type="text" id="user-name" placeholder="姓名 / Name">
-
+                                    <input type="text" id="update-disease-name" placeholder="姓名 / Name">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-email" class="am-u-sm-3 am-form-label">身份证号 / ID Care</label>
+                                <label for="update-disease-id" class="am-u-sm-3 am-form-label">身份证号 / ID Care</label>
                                 <div class="am-u-sm-9">
-                                    <input type="email" id="user-email" placeholder="输入你的身份证号 / ID Care">
+                                    <input type="text" id="update-disease-id" placeholder="输入身份证号 / ID Care">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-phone" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
+                                <label for="update-disease-phone" class="am-u-sm-3 am-form-label">电话 / Telephone</label>
                                 <div class="am-u-sm-9">
-                                    <input type="tel" id="user-phone" placeholder="输入电话号码 / Telephone">
+                                    <input type="tel" id="update-disease-phone" placeholder="输入电话号码 / Telephone">
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="user-job" class="am-u-sm-3 am-form-label">职业 / Job</label>
-                                <div class="am-u-sm-9">
-                                    <input type="text" id="user-job" placeholder="输入过敏药物 / Allergy drugs">
+                                <label for="add-disease-sex" class="am-u-sm-3 am-form-label">性别 / Sex</label>
+                                <div class="am-u-sm-9 sex-box">
+                                    <input class="sex-radio" type="radio" id="update-user-sex-male" name="sex" value="1" checked/>
+                                    <label for="add-user-sex-male" class="sex">男</label>
+                                    <input class="sex-radio" type="radio" id="update-user-sex-female" name="sex" value="0"/>
+                                    <label class="sex" for="add-user-sex-female">女</label>
                                 </div>
                             </div>
 
+                            <div class="am-form-group">
+                                <label for="update-disease-day" class="am-u-sm-3 am-form-label">出生年月日 / Birthday</label>
+                                <div class="am-u-sm-9">
+                                    <input type="Date" id="update-disease-day" >
+                                </div>
+                            </div>
+
+                            <div class="am-form-group">
+                                <label for="update-disease-job" class="am-u-sm-3 am-form-label">职业 / Job</label>
+                                <div class="am-u-sm-9">
+                                    <input type="text" id="update-disease-job" placeholder="输入职业 / Job">
+                                </div>
+                            </div>
 
                             <div class="am-form-group">
                                 <label for="user-QQ" class="am-u-sm-3 am-form-label">所属类别 / Type</label>
                                 <div class="am-u-sm-9">
                                     <div class="am-form-group">
-                                        <select data-am-selected="{btnSize: 'sm'}">
-                                            <option value="option1">所有类别</option>
-                                            <option value="option2">感觉障碍</option>
-                                            <option value="option3">知觉障碍</option>
-                                            <option value="option4">注意障碍</option>
-                                            <option value="option5">记忆障碍</option>
-                                            <option value="option6">思维障碍</option>
-                                            <option value="option7">情感障碍</option>
-                                            <option value="option8">意志障碍</option>
-                                            <option value="option9">行为障碍</option>
-                                            <option value="option10">意识障碍</option>
-                                            <option value="option11">智力障碍</option>
-                                            <option value="option12">人格障碍</option>
+                                        <select data-am-selected="{btnSize: 'sm'}" id="select-update-disease-type">
+                                            <option value="1">其他类别</option>
+                                            <option value="2">感觉障碍</option>
+                                            <option value="3">知觉障碍</option>
+                                            <option value="4">注意障碍</option>
+                                            <option value="5">记忆障碍</option>
+                                            <option value="6">思维障碍</option>
+                                            <option value="7">情感障碍</option>
+                                            <option value="8">意志障碍</option>
+                                            <option value="9">行为障碍</option>
+                                            <option value="10">意识障碍</option>
+                                            <option value="11">智力障碍</option>
+                                            <option value="12">人格障碍</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="am-form-group">
-                                <label for="allergy-drugs1" class="am-u-sm-3 am-form-label"> 过敏药物/ Allergy drugs</label>
+                                <label for="update-allergy-drugs" class="am-u-sm-3 am-form-label">过敏药物 / Allergy drugs</label>
                                 <div class="am-u-sm-9">
-                                    <textarea class="" rows="5" id="allergy-drugs1" placeholder="输入病患的过敏药物"></textarea>
-                                    <small>请注意病患的过敏药物</small>
+                                    <textarea class="" rows="3" id="update-allergy-drugs" placeholder="输入病患的过敏药物"></textarea>
+
                                 </div>
                             </div>
 
                             <div class="am-form-group">
                                 <label for="allergy-drugs1" class="am-u-sm-3 am-form-label"> 治疗方案/ Treatment plan</label>
                                 <div class="am-u-sm-9">
-                                    <textarea class="" rows="5" id="allergy-drugs1" placeholder="输入病患的过敏药物"></textarea>
+                                    <textarea class="" rows="3" id="allergy-drugs1" placeholder="治疗方案"></textarea>
                                 </div>
                             </div>
 
                             <div class="am-form-group">
                                 <label for="user-intro" class="am-u-sm-3 am-form-label">开药 / Prescribing drugs</label>
                                 <div class="am-u-sm-9">
-                                    <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">历史药物</button>
-                                    <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">新药</button>
-                                    <button type="button" class="am-btn am-btn-primary tpl-btn-bg-color-success ">药典</button>
+                                    <ul class="choose-care">
+                                        <li data-value="1">新药</li>
+                                        <li data-value="2">历史药物</li>
+                                        <li data-value="3">药典</li>
+                                    </ul>
+                                    <div>
+                                        <div id="yaodian">药典</div>
+                                        <div id="histroy-medicine">
+                                            <table class="am-u-sm-9 am-table am-table-striped am-table-hover table-main">
+                                                <thead>
+                                                <tr>
+                                                    <th class="table-type">序号</th>
+                                                    <th class="table-type">药名</th>
+                                                    <th class="table-title">数量</th>
+                                                    <th class="table-set">操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="histroy-cureDiseaseList">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>阿莫西林</td>
+                                                    <td>1</td>
+                                                    <td><input type="button" value="编辑" class="choose-btn"></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div id="new-medicine">
+                                            <table class="am-u-sm-9 am-table am-table-striped am-table-hover table-main">
+                                                <thead>
+                                                <tr>
+                                                    <th class="table-type">序号</th>
+                                                    <th class="table-type">药名</th>
+                                                    <th class="table-title">数量</th>
+                                                    <th class="table-set">操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="cureDiseaseList">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td><input class="checkbox-item" type="text" value="阿莫西林"></td>
+                                                    <td><input type="number" min="0" value="1"></td>
+                                                    <td> <button class="am-btn am-btn-default am-btn-xs am-text-success am-hide-sm-only">
+                                                        选择
+                                                    </button></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <h5>已选择的药物：</h5>
+                                            <table class="am-u-sm-9 am-table am-table-striped am-table-hover table-main">
+                                                <thead>
+                                                <tr>
+                                                    <th class="table-type">序号</th>
+                                                    <th class="table-type">药名</th>
+                                                    <th class="table-title">数量</th>
+                                                    <th class="table-set">操作</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="chooseCureDiseaseList">
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>阿莫西林</td>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">
+                                                            <span class="am-icon-trash-o"></span> 删除
+                                                        </button></td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <button type="button" class="am-btn am-btn-primary">确认开药</button>
 
-                                    <textarea class="" rows="10" id="user-intro" placeholder="为病患开药"></textarea>
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+
+                            <div class="am-form-group">
+                                <div class="am-u-sm-9 am-u-sm-push-3">
+
                                 </div>
                             </div>
 
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3">
-                                    <button type="button" class="am-btn am-btn-primary">确认开药</button>
+                                    <button type="button" class="am-btn am-btn-primary">保存</button>
+                                    <button id="see-diseasei-info-back" type="button" class="am-btn am-btn-secondary">返回</button>
+
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-
         </div>
 
     </div>
@@ -561,6 +574,9 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/amazeui.min.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/myjs/common.js"></script>
+<script src="assets/js/myjs/disease.js"></script>
 </body>
 
 </html>

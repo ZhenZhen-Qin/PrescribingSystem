@@ -96,16 +96,16 @@
 
             <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
                 <a class="am-dropdown-toggle tpl-header-list-link" href="javascript:;">
-                    <span class="tpl-header-list-user-nick">覃医生</span><span class="tpl-header-list-user-ico"> <img
+                    <span id="admin-name" class="tpl-header-list-user-nick">医生</span><span class="tpl-header-list-user-ico"> <img
                         src="assets/img/user01.png"></span>
                 </a>
                 <ul class="am-dropdown-content">
                     <li><a href="#"><span class="am-icon-bell-o"></span> 资料</a></li>
                     <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
-                    <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                    <li><a href="./login.html"><span class="am-icon-power-off"></span> 退出</a></li>
                 </ul>
             </li>
-            <li><a href="###" class="tpl-header-list-link"><span
+            <li><a href="./login.html" class="tpl-header-list-link"><span
                     class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
         </ul>
     </div>
@@ -124,18 +124,21 @@
                         <span>首页</span>
                     </a>
                 </li>
+
                 <li class="tpl-left-nav-item">
                     <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
-                        <i class="am-icon-bar-chart"></i>
+                        <i class="am-icon-wpforms"></i>
                         <span>病患信息</span>
-                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
                     </a>
-                    <ul class="tpl-left-nav-sub-menu">
+                    <ul class="tpl-left-nav-sub-menu" style="display: block;">
                         <li>
                             <a href="disease-info.html">
                                 <i class="am-icon-angle-right"></i>
                                 <span>病患信息</span>
-                                <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                <i class="tpl-left-nav-content tpl-badge-success">
+                                    5
+                                </i>
                             </a>
                         </li>
                     </ul>
@@ -161,7 +164,7 @@
                 </li>
 
 
-                <li class="tpl-left-nav-item">
+                <li class="tpl-left-nav-item" id="admin-manage">
                     <a href="admin.html" class="nav-link tpl-left-nav-link-list">
                         <i class="am-icon-cog"></i>
                         <span>普通管理员管理</span>
@@ -195,7 +198,6 @@
 
 
         <div class="row">
-            <h3>最近上新的药品</h3>
             <div class="am-u-sm-12 am-u-md-6 am-u-lg-4">
                 <div class="tpl-table-images-content">
                     <div class="tpl-table-images-content-i-time">发布时间：2016-09-12</div>
@@ -341,8 +343,8 @@
 
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/amazeui.min.js"></script>
-<script src="assets/js/iscroll.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="assets/js/jquery.cookie.js"></script>
+<script src="assets/js/myjs/index.js"></script>
 </body>
 
 </html>

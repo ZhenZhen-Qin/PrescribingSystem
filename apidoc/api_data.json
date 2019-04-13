@@ -38,6 +38,13 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "diseaseType",
+            "description": "<p>病患类别</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "diseaseBirthday",
@@ -351,6 +358,13 @@
           },
           {
             "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "diseaseType",
+            "description": "<p>病患类别</p>"
+          },
+          {
+            "group": "Parameter",
             "type": "String",
             "optional": false,
             "field": "diseaseBirthday",
@@ -468,6 +482,63 @@
             "optional": false,
             "field": "joinTime",
             "description": "<p>部门</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "router/userAdmin.js",
+    "groupTitle": "user"
+  },
+  {
+    "type": "post",
+    "url": "/user/checkUserLogin",
+    "title": "checkUserLogin",
+    "name": "checkUserLogin",
+    "group": "user",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "jobNumber",
+            "description": "<p>工号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "userPassword",
+            "description": "<p>用户密码</p>"
           }
         ]
       }
@@ -639,13 +710,6 @@
             "optional": false,
             "field": "jobNumber",
             "description": "<p>工号</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "userName",
-            "description": ""
           }
         ]
       }
@@ -696,6 +760,56 @@
             "optional": false,
             "field": "jobNumber",
             "description": "<p>工号</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "router/userAdmin.js",
+    "groupTitle": "user"
+  },
+  {
+    "type": "post",
+    "url": "/user/removeUserInfoMany",
+    "title": "removeUserInfoMany",
+    "name": "removeUserInfoMany",
+    "group": "user",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "jobNumberArr",
+            "description": "<p>工号数组</p>"
           }
         ]
       }

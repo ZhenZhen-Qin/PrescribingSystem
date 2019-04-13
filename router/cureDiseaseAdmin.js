@@ -4,22 +4,20 @@ const querystring = require("querystring");
 var bodyParser  = require("body-parser");
 Router.use(bodyParser.urlencoded({ extended: false }));
 
-const Disease = require("../mongo/model/Disease");
+const cureDisease = require("../mongo/model/CureDisease");
 
 
 /**
- * @api {post} /disease/addDiseaseInfo addDiseaseInfo
- * @apiName addDiseaseInfo
- * @apiGroup disease
+ * @api {post} /cureDisease/addCureDiseaseInfo addCureDiseaseInfo
+ * @apiName addCureDiseaseInfo
+ * @apiGroup cureDisease
  *
- * @apiParam {String} diseaseId 病患id
+ * @apiParam {String} diseaseID 病患id
  * @apiParam {String} diseaseName 病患姓名
- * @apiParam {String} diseaseMobile 病患手机
- * @apiParam {Number} diseaseSex 病患性别
- * @apiParam {Number} diseaseType 病患类别
- * @apiParam {String} diseaseBirthday 病患出生年月
- * @apiParam {String} diseaseAllergyDrugs 过敏药物
- * @apiParam {String} diseaseJob 病患职业
+ * @apiParam {String} cureDiseaseTime 治病时间
+ * @apiParam {String} cureDiseaseDesc 治疗方案描述
+ * @apiParam {String} attendingDoctorName 主治医生姓名
+ * @apiParam {String} attendingDoctorMobile 主治医生电话
  *
  * @apiSuccess {Number} err 错误码 0：ok  -1 失败
  * @apiSuccess {String} msg  结果信息

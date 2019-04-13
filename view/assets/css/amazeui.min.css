@@ -15142,3 +15142,8 @@ tbody.am-collapse.am-in {
     margin-top: 1rem;
     margin-bottom: 1rem
 }
+
+.userTypeCheckbox{
+    font-size: 14px;
+    margin-top: 10px;
+}

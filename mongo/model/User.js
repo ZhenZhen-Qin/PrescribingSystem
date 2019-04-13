@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 let userSchema = mongoose.Schema({
-    jobNumber:{type:String,unique:true},  // 工号，用于登录的用户名
+    jobNumber:{type:String,required:true,unique:true},  // 工号，用于登录的用户名
     userName:{type:String},   // 姓名
     userPassword:{type:String},
     mobileNumber:{type:String},
     Email:{type:String},
-    userType:{type:Number},
+    userType:{type:Number,default:0},
     department:{type:String},
     joinTime:{type:Number,default:Date.parse(new Date())},  //加入时间,时间戳毫秒
 });
