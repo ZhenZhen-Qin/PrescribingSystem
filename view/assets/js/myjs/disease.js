@@ -13,8 +13,11 @@ let pagesize = 5;
 let page = 1;
 let currentPage = 1;
 let totalPage = 0;
+let allergyDrugsArr = [];  //存放过敏药物
+let newChooseMedicineArr = [];
 let diseaseTypeArr = ['其他类别','感觉障碍','知觉障碍','注意障碍','记忆障碍','思维障碍','情感障碍','意志障碍','行为障碍','意识障碍','智力障碍','人格障碍'];
 let addNewDiseaseInfo = ()=>{
+    console.log($('#allergy-select-item option').filter(':checked').html())
     let obj = {
         diseaseId:$('#add-user-id').val(),
         diseaseName:$('#add-user-name').val(),
@@ -23,7 +26,7 @@ let addNewDiseaseInfo = ()=>{
         diseaseBirthday:Date.parse($('#add-user-day').val()),
         diseaseType:$('.select-disease-type option').filter(':checked').val(),
         diseaseJob:$('#add-user-job').val(),
-        diseaseAllergyDrugs:$('#add-allergy-drugs').val(),
+        diseaseAllergyDrugs:diseaseelectedAllergy.join('，'),
     }
     let url = rootPath + '/disease/addDiseaseInfo';
 
@@ -172,18 +175,39 @@ let seeDiseaseInfoDetails = (diseaseId)=>{
 
         // console.log($('#select-update-disease-type')[0].getAttribute('data-am-selected'))
         $('#select-update-disease-type option').each((idx,item)=>{
-
             if(idx+1 === res.data.diseaseList[0].diseaseType*1){
                 item.setAttribute("checked",true)
                 return ;
             }
 
         })
-        $('#update-allergy-drugs').val(res.data.diseaseList[0].diseaseAllergyDrugs)
-
+        $('#update-allergy-drugs').val(res.data.diseaseList[0].diseaseAllergyDrugs);
+        allergyDrugsArr = res.data.diseaseList[0].diseaseAllergyDrugs.split('，')
     })
 }
-let updateDiseaseInfo = (diseaseId)=>{
+
+let deleteChooseNewMedicne = (idx)=>{
+    newChooseMedicineArr.remove(newChooseMedicineArr[idx]);
+    let str = '';
+    newChooseMedicineArr.map((item,idx)=>{
+        str+=`
+            <tr>
+                <td>${idx+1}</td>
+                <td>${item.name}</td>
+                <td>${item.num}</td>
+                <td>
+                    <button onclick="deleteChooseNewMedicne(${idx})" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">
+                        <span class="am-icon-trash-o"></span> 删除
+                    </button></td>
+            </tr>`;
+    })
+    $('#chooseCureDiseaseList').html(str)
+    console.log(newChooseMedicineArr)
+}
+//药典里的change事件的查询
+let selectMedicineInfo = ()=>{
+    let medicineSeleValue = $('#find-medicine-name-btn').val();
+    console.log(medicineSeleValue)
 
 }
 
@@ -255,4 +279,134 @@ $('.choose-care').on('click','li',function () {
         case 2:$('#histroy-medicine').css('display','block').siblings().css('display','none');break;
         case 3:$('#yaodian').css('display','block').siblings().css('display','none');break;
     }
+});
+// 新药选择
+$('#choose-new-medicine-btn').on('click',function () {
+    let obj = {
+         name : $('#choose-new-medicine-name').val(),
+         num : $('#choose-new-medicine-num').val()
+    }
+    let nameArr = [];
+    newChooseMedicineArr.map((item,idx)=>{
+        nameArr.push(item.name);
+    })
+    if(nameArr.indexOf(obj.name)!=-1){
+        alert('该药已存在！')
+        return ;
+    }
+    if(obj.name===''){alert('请输入药品名称');return;}
+    newChooseMedicineArr.push(obj);
+    $('#choose-new-medicine-name').val("");
+    $('#choose-new-medicine-num').val("1");
+    console.log(newChooseMedicineArr)
+    let str = '';
+    newChooseMedicineArr.map((item,idx)=>{
+        str+=`
+            <tr>
+                <td>${idx+1}</td>
+                <td>${item.name}</td>
+                <td>${item.num}</td>
+                <td>
+                    <button onclick="deleteChooseNewMedicne(${idx})" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">
+                        <span class="am-icon-trash-o"></span> 删除
+                    </button></td>
+            </tr>`;
+    })
+    $('#chooseCureDiseaseList').html(str)
+});
+
+// 选择药典，点击半透明时关闭药典查询
+$('#yaodian-mask').on('click',function () {
+    $(this).parent().css('display','none')
 })
+
+// 确认开药，判断过敏药物
+$('#confirmOpenMedicine').on('click',()=>{
+    //判断过敏药物
+    let nameArr = [];
+    newChooseMedicineArr.map((item,idx)=>{
+        nameArr.push(item.name);
+    })
+    allergyDrugsArr.map((item,idx)=>{
+        if(nameArr.indexOf(item)!== -1){
+            alert('你所开的处方中存在过敏药物！')
+            return ;
+        }else{
+            console.log(newChooseMedicineArr)
+            let str = '';
+            newChooseMedicineArr.map((item,idx)=>{
+                str += `
+                药品${idx+1}:${item.name},数量：${item.num},
+                `;
+            })
+            alert(`你所开的处方为：${str}请再次确认你所开的处方！`)
+        }
+    })
+    //  保存新药方
+
+
+
+
+
+
+
+
+
+
+
+
+})
+
+
+// 选择过敏的二级联动
+let allergyArr = new  Array();
+let diseaseelectedAllergy = [];
+
+allergyArr[0 ]="无";
+allergyArr[1 ]="青霉素，氨基苄青霉素，链霉素，卡那霉素";
+allergyArr[2 ]="磺胺噻唑，磺胺嘧啶，长效磺胺，复方新诺明";
+allergyArr[3 ]="鲁米那，安定";
+allergyArr[4 ]="阿司匹林，去痛片";
+allergyArr[5 ]="普鲁卡因，";
+allergyArr[6 ]="丙种胎盘球蛋白，动物血清";
+allergyArr[7 ]="乙肝疫苗，麻花疫苗，水痘疫苗";
+allergyArr[8 ]="白僵蚕，水蛭，地龙，蜂乳，乌贼骨，蟾蜍，穿心莲，板蓝根，番泻叶，丹参，红花，大黄，三七"
+
+let init = ()=>
+{
+    var city = document.getElementById("allergy-select-item");
+    var cityArr = allergyArr[0].split("，");
+    for(var i=0;i<cityArr.length;i++)
+    {
+        city[i]=new Option(cityArr[i],cityArr[i]);
+    }
+}
+let getMedicine = ()=>
+{
+    var pro = document.getElementById("allergy-select");
+    var city = document.getElementById("allergy-select-item");
+    var index = pro.selectedIndex;
+    var cityArr = allergyArr[index].split("，");
+
+    city.length = 0;
+    //将城市数组中的值填充到城市下拉框中
+    for(var i=0;i<cityArr.length;i++)
+    {
+        city[i]=new Option(cityArr[i],cityArr[i]);
+    }
+}
+let saveMedicine =  ()=>{
+    let val = $('#allergy-select-item option').filter(':checked').html();
+    let $span = $('<span>&times;</span>')
+    let $b = $('<b>'+val+'</b>')
+    let $li = $('<li />');
+    $li.append($b);
+    $li.append($span);
+    $span[0].addEventListener('click',function () {
+        $(this).parent().remove();
+        diseaseelectedAllergy.remove($(this).prev().html());
+    })
+    if(diseaseelectedAllergy.indexOf(val) !==-1){alert('你已经选择了该药物');return;}
+    $('#selected-allergy').append($li);
+    diseaseelectedAllergy.push(val)
+}

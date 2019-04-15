@@ -59,7 +59,7 @@ Router.post('/findDiseaseInfoByAll',(req,res)=>{
         .then((data)=>{
             // 获取总条数
             obj.total=data.length
-            return Disease.find().limit(Number(pagesize)).skip((Number(page)-1)*Number(pagesize))
+            return Disease.find().limit(Number( )).skip((Number(page)-1)*Number(pagesize))
         })
         .then((data)=>{
             obj.diseaseList=data;

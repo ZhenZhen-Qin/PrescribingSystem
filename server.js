@@ -31,6 +31,10 @@ app.use("/user",userRouter);
 const adminRouter = require('./router/diseaseAdmin.js');
 app.use("/disease",adminRouter);
 
+// 药典的信息
+const medicineRouter = require('./router/medicineAdmin.js');
+app.use("/medicine",medicineRouter);
+
 
 app.listen(3000,()=>{
     console.log("server start in port " + 3000)

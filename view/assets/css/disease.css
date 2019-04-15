@@ -44,11 +44,60 @@
     display: none;
 }
 #yaodian{
-    display: none;
+    display: block;
+}
+#yaodian #yaodian-mask{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100px;
+    bottom: 0;
+    margin:auto;
+    width: 100vw;
+    height: 120vh;
+    background: #333333;
+    opacity: 0.5;
+    z-index: 9999;
+}
+
+#yaodian #yaodian-content{
+    width: 600px;
+    height: 400px;
+    background: #ffffff;
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+}
+
+#yaodian #yaodian-content .input-inline{
+    margin: 20px auto!important;
 }
 
 .choose-btn{
     padding:5px 10px;
     color: #ffffff;
     background: #e4393c;
+}
+
+#allergy-select{
+    width: 200px;
+    float: left;
+}
+#allergy-select-item{
+    width: 150px!important;
+    float: left;
+}
+
+#selected-allergy{
+    display: flex;
+}
+#selected-allergy li{
+    padding: 3px 8px;
+    background: skyblue;
+    color: #ffffff;
+    margin-right: 9px;
 }

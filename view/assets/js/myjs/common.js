@@ -1,6 +1,13 @@
 function getLocalTime(nS) {
     return new Date(parseInt(nS)).toLocaleString().replace(/:\d{1,2}$/,' ');
 }
+Array.prototype.remove = function(val) {
+    var index = this.indexOf(val);
+    if (index > -1) {
+        this.splice(index, 1);
+    }
+};
+
 
 function add0(m){return m<10?'0'+m:m }
 function timeStampToDate(shijianchuo)

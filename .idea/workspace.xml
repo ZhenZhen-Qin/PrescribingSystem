@@ -2,31 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c124e46-c935-4293-a41e-b493fdea3b65" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router/cureDiseaseAdmin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/css/disease.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/js/myjs/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/assets/js/myjs/disease.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/router/medicineAdmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apidoc/api_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/apidoc/api_data.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apidoc/api_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/apidoc/api_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apidoc/api_project.js" beforeDir="false" afterPath="$PROJECT_DIR$/apidoc/api_project.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apidoc/api_project.json" beforeDir="false" afterPath="$PROJECT_DIR$/apidoc/api_project.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo/model/CureDisease.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo/model/CureDisease.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo/model/Disease.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo/model/Disease.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongo/model/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo/model/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo/model/Medicine.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo/model/Medicine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/diseaseAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/diseaseAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/userAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/userAdmin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/admin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/css/amazeui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/amazeui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/css/disease.css" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/css/disease.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/assets/js/myjs/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/js/myjs/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/js/myjs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/js/myjs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/assets/js/myjs/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/js/myjs/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/assets/js/myjs/disease.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/js/myjs/disease.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/disease-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/disease-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/medicinal-manage.html" beforeDir="false" afterPath="$PROJECT_DIR$/view/medicinal-manage.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,9 +27,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5518441">
+    <splitter split-orientation="horizontal" split-proportion="0.59555244">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/server.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="211">
+                  <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/admin.html">
               <provider selected="true" editor-type-id="text-editor">
@@ -59,8 +56,8 @@
           <file leaf-file-name="disease-info.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/disease-info.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
-                  <caret line="511" column="56" selection-start-line="511" selection-start-column="56" selection-end-line="511" selection-end-column="56" />
+                <state relative-caret-position="154">
+                  <caret line="257" selection-start-line="257" selection-end-line="258" />
                   <folding>
                     <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -81,16 +78,26 @@
                     <element signature="n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#1;n#div#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                    <element signature="n#table#0;n#div#2;n#div#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
+          <file leaf-file-name="medicineAdmin.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/router/medicineAdmin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="22">
-                  <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+                <state relative-caret-position="3169">
+                  <caret line="223" selection-start-line="223" selection-end-line="223" />
+                  <folding>
+                    <element signature="e#1445#1754#0" />
+                    <element signature="e#2297#2588#0" />
+                    <element signature="e#3101#3400#0" />
+                    <element signature="e#3921#4254#0" />
+                    <element signature="e#5071#5648#0" />
+                    <element signature="e#6227#6508#0" />
+                    <element signature="e#6864#7160#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -98,8 +105,8 @@
           <file leaf-file-name="amazeui.min.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/assets/css/amazeui.min.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="156">
-                  <caret line="4518" selection-start-line="4518" selection-end-line="4518" selection-end-column="15" />
+                <state relative-caret-position="168">
+                  <caret line="4268" selection-start-line="4268" selection-end-line="4268" />
                   <folding>
                     <element signature="e#53597#53920#1" expanded="true" />
                     <element signature="e#214420#215535#2" expanded="true" />
@@ -111,20 +118,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="admin.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/assets/css/admin.css">
+          <file leaf-file-name="disease.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/assets/css/disease.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="175">
-                  <caret line="383" selection-start-line="383" selection-end-line="388" selection-end-column="1" />
+                <state relative-caret-position="198">
+                  <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="disease.css" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/assets/css/disease.css">
+          <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/common.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="821">
-                  <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+                <state relative-caret-position="66">
+                  <caret line="3" column="22" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -132,13 +139,11 @@
           <file leaf-file-name="diseaseAdmin.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/router/diseaseAdmin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="132">
-                  <caret line="241" column="36" lean-forward="true" selection-end-line="259" selection-end-column="22" />
+                <state relative-caret-position="87">
+                  <caret line="4" column="55" selection-end-line="259" selection-end-column="22" />
                   <folding>
                     <element signature="e#265#778#0" />
-                    <element signature="e#820#1380#0" />
                     <element signature="e#1384#1688#0" />
-                    <element signature="e#1736#2231#0" />
                     <element signature="e#2234#2519#0" />
                     <element signature="e#2567#3021#0" />
                     <element signature="e#3421#3875#0" />
@@ -157,7 +162,7 @@
             <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/admin.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="322">
-                  <caret line="44" column="38" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="44" selection-end-column="38" />
+                  <caret line="44" column="38" selection-start-line="38" selection-start-column="12" selection-end-line="44" selection-end-column="38" />
                   <folding>
                     <element signature="e#5635#6174#0" />
                   </folding>
@@ -174,41 +179,39 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="CureDisease.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mongo/model/CureDisease.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="15" selection-start-line="15" selection-end-line="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="disease.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="disease.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/disease.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1354">
-                  <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+                <state relative-caret-position="190">
+                  <caret line="187" selection-start-line="187" selection-end-line="187" />
                   <folding>
-                    <element signature="e#435#988#0" />
+                    <element signature="e#773#1225#0" />
                     <element signature="e#1436#1646#0" />
                     <element signature="e#1673#1807#0" />
                     <element signature="e#2243#4390#0" />
+                    <element signature="e#2842#4353#0" />
                     <element signature="e#2246#2479#0" />
                     <element signature="e#2156#2189#0" />
                     <element signature="e#4779#5077#0" />
                     <element signature="e#4776#5003#0" />
                     <element signature="e#4889#4897#0" />
+                    <element signature="e#7010#7133#0" />
                     <element signature="e#5217#5361#0" />
                     <element signature="e#5216#5755#0" />
                     <element signature="e#5543#5752#0" />
+                    <element signature="e#5647#5655#0" />
                     <element signature="e#5635#5643#0" />
                     <element signature="e#6868#6965#0" />
-                    <element signature="e#7004#7032#0" />
                     <element signature="e#8298#8306#0" />
+                    <element signature="e#8595#8603#0" />
+                    <element signature="e#11185#11530#0" />
+                    <element signature="e#11868#12079#0" />
+                    <element signature="e#13447#13772#0" />
+                    <element signature="e#12489#12511#0" />
                   </folding>
                 </state>
               </provider>
@@ -217,8 +220,8 @@
           <file leaf-file-name="cureDiseaseAdmin.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/router/cureDiseaseAdmin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="286">
-                  <caret line="19" column="43" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="43" />
+                <state relative-caret-position="44">
+                  <caret line="8" selection-start-line="8" selection-end-line="8" />
                   <folding>
                     <element signature="e#859#1443#0" />
                     <element signature="e#1447#1751#0" />
@@ -237,11 +240,27 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Medicine.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Medicine.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mongo/model/Medicine.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="110">
-                  <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="12" />
+                <state relative-caret-position="66">
+                  <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="userAdmin.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/router/userAdmin.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="281">
+                  <caret line="224" selection-start-line="224" selection-end-line="264" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#258#764#0" />
+                    <element signature="e#803#1338#0" />
+                    <element signature="e#1342#1638#0" />
+                    <element signature="e#1683#2203#0" />
+                    <element signature="e#6998#7971#0" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -252,22 +271,11 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>admin-name</find>
-      <find>覃</find>
-      <find>findUserInfo</find>
-      <find>工号</find>
-      <find>你的</find>
-      <find>所有</find>
-      <find>params</find>
-      <find>新增</find>
-      <find>tbody</find>
       <find>ul</find>
-      <find>form</find>
       <find>search</find>
       <find>所有类别</find>
       <find>data-am-selecte</find>
       <find>批量</find>
-      <find>updateDiseaseInfo</find>
       <find>查找所有</find>
       <find>$('#add-disease')</find>
       <find>select-update-disease-type</find>
@@ -282,12 +290,26 @@
       <find>批量删除</find>
       <find>删除</find>
       <find>选择</find>
+      <find>allergyType</find>
+      <find>choose-new-medicine-btn</find>
+      <find>close</find>
+      <find>form</find>
+      <find>药典</find>
+      <find>yaodian</find>
+      <find>allergyDrugsArr</find>
+      <find>updateDiseaseInfo</find>
+      <find>内容</find>
+      <find>lim</find>
+      <find>Disease</find>
     </findStrings>
     <replaceStrings>
       <replace>Disease</replace>
       <replace>你</replace>
       <replace>User</replace>
       <replace>diseaselist</replace>
+      <replace>allergyArr</replace>
+      <replace>getMedicine</replace>
+      <replace>Medicine</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -297,7 +319,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/mongo/mongoose.js" />
-        <option value="$PROJECT_DIR$/mongo/model/Medicine.js" />
         <option value="$PROJECT_DIR$/view/_menu.html" />
         <option value="$PROJECT_DIR$/view/table-font-list.html" />
         <option value="$PROJECT_DIR$/view/table-images-list.html" />
@@ -307,7 +328,6 @@
         <option value="$PROJECT_DIR$/view/assets/less/styles.less" />
         <option value="$PROJECT_DIR$/view/register.html" />
         <option value="$PROJECT_DIR$/view/assets/css/register.css" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/apidoc.json" />
         <option value="$PROJECT_DIR$/router/userAdmin.js" />
         <option value="$PROJECT_DIR$/mongo/model/User.js" />
@@ -321,14 +341,17 @@
         <option value="$PROJECT_DIR$/mongo/model/Disease.js" />
         <option value="$PROJECT_DIR$/view/assets/js/myjs/login.js" />
         <option value="$PROJECT_DIR$/view/login.html" />
-        <option value="$PROJECT_DIR$/router/diseaseAdmin.js" />
-        <option value="$PROJECT_DIR$/view/assets/js/myjs/common.js" />
         <option value="$PROJECT_DIR$/router/cureDiseaseAdmin.js" />
         <option value="$PROJECT_DIR$/mongo/model/CureDisease.js" />
-        <option value="$PROJECT_DIR$/view/assets/js/myjs/disease.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/view/assets/js/myjs/common.js" />
+        <option value="$PROJECT_DIR$/router/diseaseAdmin.js" />
         <option value="$PROJECT_DIR$/view/assets/css/disease.css" />
         <option value="$PROJECT_DIR$/view/disease-info.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/view/assets/js/myjs/disease.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/router/medicineAdmin.js" />
+        <option value="$PROJECT_DIR$/mongo/model/Medicine.js" />
       </list>
     </option>
   </component>
@@ -346,9 +369,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-180" />
-    <option name="y" value="86" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-98" />
+    <option name="y" value="350" />
     <option name="width" value="2460" />
     <option name="height" value="1018" />
   </component>
@@ -365,6 +388,22 @@
               <item name="PrescribingSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="PrescribingSystem" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PrescribingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrescribingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="mongo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PrescribingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrescribingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="mongo" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PrescribingSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PrescribingSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -373,6 +412,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="{&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="D:/Code/backManage" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -399,15 +439,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.picture-add.html">
+  <component name="RunManager" selected="Node.js.server.js">
     <configuration name="article-add.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PrescribingSystem/view/article-add.html" />
     <configuration name="picture-add.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/PrescribingSystem/view/picture-add.html" />
+    <configuration name="server.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" nameIsGenerated="true" path-to-js-file="server.js" working-dir="$PROJECT_DIR$" />
     <list>
       <item itemvalue="JavaScript Debug.article-add.html" />
       <item itemvalue="JavaScript Debug.picture-add.html" />
+      <item itemvalue="Node.js.server.js" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.server.js" />
         <item itemvalue="JavaScript Debug.picture-add.html" />
         <item itemvalue="JavaScript Debug.article-add.html" />
       </list>
@@ -427,25 +470,24 @@
       <workItem from="1554602916241" duration="11498000" />
       <workItem from="1554688738316" duration="2384000" />
       <workItem from="1554767870803" duration="25044000" />
-      <workItem from="1554890100144" duration="60920000" />
+      <workItem from="1554890100144" duration="84879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100502000" />
+    <option name="totallyTimeSpent" value="124461000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1453" height="873" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1453" height="873" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.109103546" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.10145935" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3298292" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.14717478" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.62943494" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -469,34 +511,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/view/disease-info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8184">
-          <caret line="372" column="52" selection-start-line="372" selection-start-column="43" selection-end-line="372" selection-end-column="52" />
-          <folding>
-            <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#ul#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#li#2;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#li#3;n#ul#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#select#0;n#div#0;n#div#0;n#div#6;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="880">
@@ -576,6 +590,7 @@
             <element signature="n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#table#0;n#div#2;n#div#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -697,13 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -721,27 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router/userAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="224" selection-start-line="224" selection-end-line="264" selection-end-column="3" />
-          <folding>
-            <element signature="e#258#764#0" />
-            <element signature="e#803#1338#0" />
-            <element signature="e#1342#1638#0" />
-            <element signature="e#1683#2203#0" />
-            <element signature="e#6998#7971#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mongo/model/CureDisease.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -756,70 +743,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router/cureDiseaseAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="e#859#1443#0" />
-            <element signature="e#1447#1751#0" />
-            <element signature="e#1799#2294#0" />
-            <element signature="e#2297#2582#0" />
-            <element signature="e#2630#3084#0" />
-            <element signature="e#3430#3890#0" />
-            <element signature="e#3895#4223#0" />
-            <element signature="e#4266#5026#0" />
-            <element signature="e#5030#5594#0" />
-            <element signature="e#5639#6149#0" />
-            <element signature="e#6154#6429#0" />
-            <element signature="e#6474#6775#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="44" column="38" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="44" selection-end-column="38" />
+          <caret line="44" column="38" selection-start-line="38" selection-start-column="12" selection-end-line="44" selection-end-column="38" />
           <folding>
             <element signature="e#5635#6174#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/router/diseaseAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="241" column="36" lean-forward="true" selection-end-line="259" selection-end-column="22" />
-          <folding>
-            <element signature="e#265#778#0" />
-            <element signature="e#820#1380#0" />
-            <element signature="e#1384#1688#0" />
-            <element signature="e#1736#2231#0" />
-            <element signature="e#2234#2519#0" />
-            <element signature="e#2567#3021#0" />
-            <element signature="e#3421#3875#0" />
-            <element signature="e#3024#3352#0" />
-            <element signature="e#3395#4155#0" />
-            <element signature="e#4159#4681#0" />
-            <element signature="e#4726#5212#0" />
-            <element signature="e#5217#5492#0" />
-            <element signature="e#5537#5838#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mongo/model/Medicine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/assets/css/disease.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -842,10 +772,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/userAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="224" selection-start-line="224" selection-end-line="264" selection-end-column="3" />
+          <folding>
+            <element signature="e#258#764#0" />
+            <element signature="e#803#1338#0" />
+            <element signature="e#1342#1638#0" />
+            <element signature="e#1683#2203#0" />
+            <element signature="e#6998#7971#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/cureDiseaseAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#859#1443#0" />
+            <element signature="e#1447#1751#0" />
+            <element signature="e#1799#2294#0" />
+            <element signature="e#2297#2582#0" />
+            <element signature="e#2630#3084#0" />
+            <element signature="e#3430#3890#0" />
+            <element signature="e#3895#4223#0" />
+            <element signature="e#4266#5026#0" />
+            <element signature="e#5030#5594#0" />
+            <element signature="e#5639#6149#0" />
+            <element signature="e#6154#6429#0" />
+            <element signature="e#6474#6775#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/assets/css/amazeui.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="4518" selection-start-line="4518" selection-end-line="4518" selection-end-column="15" />
+        <state relative-caret-position="168">
+          <caret line="4268" selection-start-line="4268" selection-end-line="4268" />
           <folding>
             <element signature="e#53597#53920#1" expanded="true" />
             <element signature="e#214420#215535#2" expanded="true" />
@@ -856,35 +828,56 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/assets/css/disease.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/disease.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1354">
-          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+        <state relative-caret-position="190">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
           <folding>
-            <element signature="e#435#988#0" />
+            <element signature="e#773#1225#0" />
             <element signature="e#1436#1646#0" />
             <element signature="e#1673#1807#0" />
             <element signature="e#2243#4390#0" />
+            <element signature="e#2842#4353#0" />
             <element signature="e#2246#2479#0" />
             <element signature="e#2156#2189#0" />
             <element signature="e#4779#5077#0" />
             <element signature="e#4776#5003#0" />
             <element signature="e#4889#4897#0" />
+            <element signature="e#7010#7133#0" />
             <element signature="e#5217#5361#0" />
             <element signature="e#5216#5755#0" />
             <element signature="e#5543#5752#0" />
+            <element signature="e#5647#5655#0" />
             <element signature="e#5635#5643#0" />
             <element signature="e#6868#6965#0" />
-            <element signature="e#7004#7032#0" />
             <element signature="e#8298#8306#0" />
+            <element signature="e#8595#8603#0" />
+            <element signature="e#11185#11530#0" />
+            <element signature="e#11868#12079#0" />
+            <element signature="e#13447#13772#0" />
+            <element signature="e#12489#12511#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/disease-info.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="511" column="56" selection-start-line="511" selection-start-column="56" selection-end-line="511" selection-end-column="56" />
+        <state relative-caret-position="154">
+          <caret line="257" selection-start-line="257" selection-end-line="258" />
           <folding>
             <element signature="n#header#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -905,14 +898,58 @@
             <element signature="n#div#7;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#8;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#table#0;n#div#2;n#div#0;n#div#0;n#div#9;n#form#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/router/diseaseAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        <state relative-caret-position="87">
+          <caret line="4" column="55" selection-end-line="259" selection-end-column="22" />
+          <folding>
+            <element signature="e#265#778#0" />
+            <element signature="e#1384#1688#0" />
+            <element signature="e#2234#2519#0" />
+            <element signature="e#2567#3021#0" />
+            <element signature="e#3421#3875#0" />
+            <element signature="e#3024#3352#0" />
+            <element signature="e#3395#4155#0" />
+            <element signature="e#4159#4681#0" />
+            <element signature="e#4726#5212#0" />
+            <element signature="e#5217#5492#0" />
+            <element signature="e#5537#5838#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router/medicineAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3169">
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
+          <folding>
+            <element signature="e#1445#1754#0" />
+            <element signature="e#2297#2588#0" />
+            <element signature="e#3101#3400#0" />
+            <element signature="e#3921#4254#0" />
+            <element signature="e#5071#5648#0" />
+            <element signature="e#6227#6508#0" />
+            <element signature="e#6864#7160#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongo/model/Medicine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>

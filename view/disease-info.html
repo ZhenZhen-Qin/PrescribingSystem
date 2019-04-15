@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/disease.css">
 </head>
 
-<body data-type="generalComponents">
+<body data-type="generalComponents" onload="init()">
 
 
 <header class="am-topbar am-topbar-inverse admin-header">
@@ -352,13 +352,33 @@
                             <div class="am-form-group">
                                 <label for="add-allergy-drugs" class="am-u-sm-3 am-form-label">过敏药物 / Allergy drugs</label>
                                 <div class="am-u-sm-9">
-                                    <textarea class="" rows="5" id="add-allergy-drugs" placeholder="输入病患的过敏药物"></textarea>
-                                    <small>写出病患的过敏药物</small>
+                                    <select id="allergy-select" size=1 onchange="getMedicine()">
+                                        <option value= "0" >无</option>
+                                        <option value= "1" >抗生素类药物</option>
+                                        <option value= "2" >磺胺类药物</option>
+                                        <option value= "3" >镇静安眠药</option>
+                                        <option value= "4" >解热镇痛药</option>
+                                        <option value= "5" >麻醉用药</option>
+                                        <option value= "6" >血清制剂</option>
+                                        <option value= "7" >疫苗</option>
+                                        <option value= "8" >某些中草药</option>
+                                    </select>
+                                    <select id="allergy-select-item" onblur="saveMedicine()" >
+                                    </select>
                                 </div>
+                                <div class="am-u-sm-9">
+                                    <h6>已选择的过敏药物</h6>
+                                    <ul id="selected-allergy">
+
+                                    </ul>
+                                </div>
+
                             </div>
 
 
-                            <div class="am-form-group">
+
+
+                                <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3">
                                     <button id="add-disease-btn" type="button" class="am-btn am-btn-primary">保存</button>
                                 </div>
@@ -380,7 +400,7 @@
             <div class="tpl-block ">
                 <div class="am-g tpl-amazeui-form">
                     <div class="am-u-sm-12 am-u-md-9">
-                        <form class="am-form am-form-horizontal">
+                        <div class="am-form am-form-horizontal">
                             <div class="am-form-group">
                                 <label for="update-disease-name" class="am-u-sm-3 am-form-label">姓名 / Name</label>
                                 <div class="am-u-sm-9">
@@ -472,7 +492,19 @@
                                         <li data-value="3">药典</li>
                                     </ul>
                                     <div>
-                                        <div id="yaodian">药典</div>
+                                        <div id="yaodian">
+                                            <div id="yaodian-mask"></div>
+                                            <div id="yaodian-content">
+                                                <div class="tpl-fz-ml">
+                                                    <div class="portlet-input input-small input-inline">
+                                                        <div class="input-icon center">
+                                                            <i class="am-icon-search"></i>
+                                                            <input id="find-medicine-name-btn" type="text" class="form-control form-control-solid" placeholder="查找药典信息..." onkeyup="selectMedicineInfo()">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div id="histroy-medicine">
                                             <table class="am-u-sm-9 am-table am-table-striped am-table-hover table-main">
                                                 <thead>
@@ -506,11 +538,11 @@
                                                 <tbody id="cureDiseaseList">
                                                 <tr>
                                                     <td>1</td>
-                                                    <td><input class="checkbox-item" type="text" value="阿莫西林"></td>
-                                                    <td><input type="number" min="0" value="1"></td>
-                                                    <td> <button class="am-btn am-btn-default am-btn-xs am-text-success am-hide-sm-only">
-                                                        选择
-                                                    </button></td>
+                                                    <td><input id="choose-new-medicine-name" class="checkbox-item" type="text" value=""></td>
+                                                    <td><input id="choose-new-medicine-num" type="number" min="0" value="1"></td>
+                                                    <td>
+                                                        <button id="choose-new-medicine-btn" class="am-btn am-btn-default am-btn-xs am-text-success am-hide-sm-only">选择</button>
+                                                    </td>
                                                 </tr>
                                                 </tbody>
                                             </table>
@@ -525,18 +557,10 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody id="chooseCureDiseaseList">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>阿莫西林</td>
-                                                    <td>1</td>
-                                                    <td>
-                                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">
-                                                            <span class="am-icon-trash-o"></span> 删除
-                                                        </button></td>
-                                                </tr>
+
                                                 </tbody>
                                             </table>
-                                            <button type="button" class="am-btn am-btn-primary">确认开药</button>
+                                            <button id="confirmOpenMedicine" type="button" class="am-btn am-btn-primary">确认开药</button>
 
 
                                         </div>
@@ -560,7 +584,7 @@
 
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
