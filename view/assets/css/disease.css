@@ -26,7 +26,6 @@
 
 .choose-care{
     display: flex;
-
 }
 
 .choose-care li{
@@ -43,8 +42,84 @@
 #histroy-medicine{
     display: none;
 }
+
+#histroy-medicine .edit-history-box{
+
+}
+#histroy-medicine .edit-history-box .edit-history-content{
+    width: 600px;
+    height: 200px;
+    background: #ffffff;
+    z-index: 99999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+    padding: 10px 20px;
+}
+#histroy-medicine .edit-history-box .edit-history-content>div>div{
+    width: 80%;
+    margin-top: 40px;
+}
+
+#histroy-medicine .edit-history-box .edit-history-content div>input{
+    float: right;
+    margin-right: 20px;
+    padding: 6px 12px;
+    color: #ffffff;
+    border-right: 3px;
+}
+#histroy-medicine .edit-history-box .edit-history-content div>input:nth-child(1){
+    background: #17bccc;
+}
+#histroy-medicine .edit-history-box .edit-history-content div>input:nth-child(2){
+    background: #65ca65;
+
+}
+#histroy-medicine .edit-history-box .edit-history-content div p{
+    display: flex;
+    width: 80%;
+}
+#histroy-medicine .edit-history-box .edit-history-content div p>span{
+    flex: 1;
+    text-align: center;
+}
+#histroy-medicine .edit-history-box .edit-history-content div p>input{
+    width: 150px;
+}
+
+#histroy-medicine .edit-history-box .edit-history-mask{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: -100px;
+    bottom: 0;
+    margin:auto;
+    width: 100vw;
+    height: 120vh;
+    background: #333333;
+    opacity: 0.5;
+    z-index: 9999;
+}
+
+
+
 #yaodian{
-    display: block;
+    display: none;
+}
+.choose-medicine-list{
+    /*display: flex;*/
+    width: 100%;
+    overflow: hidden;
+}
+.choose-medicine-list li{
+    float: left;
+    padding: 4px 8px;
+    background: #91d9f7;
+    color: #ffffff;
+    margin-right: 10px;
 }
 #yaodian #yaodian-mask{
     position: fixed;
@@ -60,6 +135,7 @@
     z-index: 9999;
 }
 
+
 #yaodian #yaodian-content{
     width: 600px;
     height: 400px;
@@ -72,7 +148,53 @@
     bottom: 0;
     margin:auto;
 }
+#yaodian #yaodian-content .user-choose-res{
+    width: 500px;
+    box-sizing: border-box;
+}
+#yaodian #yaodian-content .user-choose-res tr{
+   font-size: 14px;
+}
+#yaodian #yaodian-content .user-choose-res td{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+#yaodian #yaodian-content .user-choose-res td:nth-child(1){
+    width: 20px;
+}
+#yaodian #yaodian-content .user-choose-res td:nth-child(3) input{
+    background: transparent;
+    border-top: 0 none;
+    border-right: 0 none;
+    border-left: 0 none;
+    outline: none;
+}
+#yaodian #yaodian-content .user-choose-res td:nth-child(2){
+    width: 300px;
+}
+#yaodian #yaodian-content .user-choose-res td:nth-child(4) input{
+    background: #5cb85c;
+    color: #ffffff;
+    padding: 5px 10px;
+}
 
+#yaodian #yaodian-content .find-res{
+    position: absolute;
+    border: 1px solid #dddddd;
+    min-width: 265px;
+    max-height: 300px;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #ffffff!important;
+    z-index: 99;
+}
+#yaodian #yaodian-content .find-res li{
+    padding: 2px 3px;
+}
+#yaodian #yaodian-content .find-res li:hover{
+    background: #e2e2e2;
+}
 #yaodian #yaodian-content .input-inline{
     margin: 20px auto!important;
 }

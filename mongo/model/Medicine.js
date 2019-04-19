@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 let medicineSchema = mongoose.Schema({
-    batchNumber:{type:String,require:true},  //生产批号
+    batchNumber:{type:String,required:true,unique:true,dropDups: true},  //生产批号
     medicineType:{type:String},  //药品类别
     medicineName:{type:String},   //药品名称
     pharmaceuticalCompany:{type:String},   //制药公司

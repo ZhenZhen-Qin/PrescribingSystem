@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 let cureDiseaseSchema = mongoose.Schema({
-    diseaseID:{type:String},  //身份证
+    diseaseId:{type:String},  //身份证
     diseaseName:{type:String},   //姓名
     cureDiseaseTime:{type:String}, //治病时间【时间戳】
     cureDiseaseDesc:{type:String}, //治疗方案描述
     attendingDoctorName:{type:String}, //主治医生姓名
-    attendingDoctorMobile:{type:String}, //主治医生电话
-    //对象转字符串，开药，记录历史药物
+    jobNumber:{type:String}, //主治医生工号
+    //对象转字符串，开药，这次看病开的处方
     prescribingDrugs:{type:String},
     // {
     // historicalDrugs:[{

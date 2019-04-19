@@ -6,7 +6,6 @@ Router.use(bodyParser.urlencoded({ extended: false }));
 
 const cureDisease = require("../mongo/model/CureDisease");
 
-
 /**
  * @api {post} /cureDisease/addCureDiseaseInfo addCureDiseaseInfo
  * @apiName addCureDiseaseInfo
@@ -17,50 +16,52 @@ const cureDisease = require("../mongo/model/CureDisease");
  * @apiParam {String} cureDiseaseTime 治病时间
  * @apiParam {String} cureDiseaseDesc 治疗方案描述
  * @apiParam {String} attendingDoctorName 主治医生姓名
- * @apiParam {String} attendingDoctorMobile 主治医生电话
+ * @apiParam {String} jobNumber 主治医生工号
+ * @apiParam {String} prescribingDrugs 处方
  *
  * @apiSuccess {Number} err 错误码 0：ok  -1 失败
  * @apiSuccess {String} msg  结果信息
  * @apiSuccess {String} data  返回数据
  */
-Router.post("/addDiseaseInfo",(req,res)=>{
-    let {diseaseId,diseaseName, diseaseMobile,diseaseType, diseaseSex, diseaseBirthday, diseaseAllergyDrugs,diseaseJob} = req.body;
-    Disease.insertMany({diseaseId,diseaseName, diseaseMobile,diseaseType, diseaseSex, diseaseBirthday, diseaseAllergyDrugs,diseaseJob})
+Router.post("/addCureDiseaseInfo",(req,res)=>{
+    let {diseaseId,diseaseName,cureDiseaseTime,cureDiseaseDesc,attendingDoctorName,jobNumber,prescribingDrugs} = req.body;
+    cureDisease.insertMany({diseaseId,diseaseName, cureDiseaseTime,cureDiseaseDesc,attendingDoctorName,jobNumber,prescribingDrugs})
         .then((data)=>{
             console.log(data)
             if(data.length > 0){
-                res.send({err:0,msg:"add disease success",data:null});
+                res.send({err:0,msg:"add cure disease success",data:null});
             }
         })
         .catch((err)=>{
             console.log(err)
-            res.send({err:-1,msg:"add disease error",data:null});
+            res.send({err:-1,msg:"add cure disease error",data:null});
         })
 });
 
 /**
- * @api {post} /disease/findDiseaseInfoByAll findDiseaseInfoByAll
- * @apiName findDiseaseInfoByAll
- * @apiGroup disease
+ * @api {post} /cureDisease/findCureDiseaseByAll findCureDiseaseByAll
+ * @apiName findCureDiseaseByAll
+ * @apiGroup cureDisease
  *
  * @apiParam {String} pagesize
  * @apiParam {String} page
+ * @apiParam {String} diseaseId
  *
  * @apiSuccess {Number} err 错误码 0：ok  -1 失败
  * @apiSuccess {String} msg  结果信息
  * @apiSuccess {String} data  返回数据
  */
-Router.post('/findDiseaseInfoByAll',(req,res)=>{
-    let  {pagesize,page}=req.body;
+Router.post('/findCureDiseaseByAll',(req,res)=>{
+    let  {pagesize,page,diseaseId}=req.body;
     let obj={}
-    Disease.find()
+    cureDisease.find({diseaseId})
         .then((data)=>{
             // 获取总条数
             obj.total=data.length
-            return Disease.find().limit(Number(pagesize)).skip((Number(page)-1)*Number(pagesize))
+            return cureDisease.find({diseaseId}).limit(Number(pagesize)).skip((Number(page)-1)*Number(pagesize))
         })
         .then((data)=>{
-            obj.diseaseList=data;
+            obj.cureDiseaseList=data;
             res.send({err:0,msg:'查询成功',data:obj})
         })
         .catch((err)=>{
@@ -80,24 +81,24 @@ Router.post('/findDiseaseInfoByAll',(req,res)=>{
  * @apiSuccess {String} msg  结果信息
  * @apiSuccess {String} data  返回数据
  */
-Router.post('/findDiseaseInfoByOne',(req,res)=>{
-    let  {diseaseId} = req.body;
-    let obj={};
-    Disease.find({diseaseId})
-        .then((data)=>{
-            // 获取总条数
-            obj.total=data.length;
-            return Disease.find({diseaseId});
-        })
-        .then((data)=>{
-            obj.diseaseList=data;
-            res.send({err:0,msg:'查询成功',data:obj})
-        })
-        .catch((err)=>{
-            console.log(err)
-            res.send({err:-1,msg:'查询错误',data:null})
-        })
-})
+// Router.post('/findDiseaseInfoByOne',(req,res)=>{
+//     let  {diseaseId} = req.body;
+//     let obj={};
+//     Disease.find({diseaseId})
+//         .then((data)=>{
+//             // 获取总条数
+//             obj.total=data.length;
+//             return Disease.find({diseaseId});
+//         })
+//         .then((data)=>{
+//             obj.diseaseList=data;
+//             res.send({err:0,msg:'查询成功',data:obj})
+//         })
+//         .catch((err)=>{
+//             console.log(err)
+//             res.send({err:-1,msg:'查询错误',data:null})
+//         })
+// })
 
 
 /**
@@ -111,24 +112,24 @@ Router.post('/findDiseaseInfoByOne',(req,res)=>{
  * @apiSuccess {String} msg  结果信息
  * @apiSuccess {String} data  返回数据
  */
-Router.post('/findDiseaseInfoByType',(req,res)=>{
-    let  {diseaseType} = req.body;
-    let obj={};
-    Disease.find({diseaseType})
-        .then((data)=>{
-            // 获取总条数
-            obj.total=data.length;
-            return Disease.find({diseaseType});
-        })
-        .then((data)=>{
-            obj.diseaseList=data;
-            res.send({err:0,msg:'查询成功',data:obj})
-        })
-        .catch((err)=>{
-            console.log(err)
-            res.send({err:-1,msg:'查询错误',data:null})
-        })
-})
+// Router.post('/findDiseaseInfoByType',(req,res)=>{
+//     let  {diseaseType} = req.body;
+//     let obj={};
+//     Disease.find({diseaseType})
+//         .then((data)=>{
+//             // 获取总条数
+//             obj.total=data.length;
+//             return Disease.find({diseaseType});
+//         })
+//         .then((data)=>{
+//             obj.diseaseList=data;
+//             res.send({err:0,msg:'查询成功',data:obj})
+//         })
+//         .catch((err)=>{
+//             console.log(err)
+//             res.send({err:-1,msg:'查询错误',data:null})
+//         })
+// })
 
 
 
@@ -145,25 +146,25 @@ Router.post('/findDiseaseInfoByType',(req,res)=>{
  * @apiSuccess {String} msg  结果信息
  * @apiSuccess {String} data  返回数据
  */
-Router.post('/findDiseaseByKw',(req,res)=>{
-    let {keyword,pagesize,page} =req.body;
-    let obj={};
-    // Goods.find({name:{$regex:'肉'}})
-    Disease.find({$or:[{diseaseId:{$regex:keyword}},{diseaseName:{$regex:keyword}},{diseaseMobile:{$regex:keyword}}]})
-        .then((data)=>{
-            // 获取总条数
-            obj.total=data.length;
-            return Disease.find({$or:[{diseaseId:{$regex:keyword}},{diseaseName:{$regex:keyword}},{diseaseMobile:{$regex:keyword}}]}).limit(Number(pagesize)).skip((Number(page)-1)*Number(pagesize));
-        })
-        .then((data)=>{
-            obj.diseaseList=data;
-            res.send({err:0,msg:'find success',data:obj})
-        })
-        .catch((err)=>{
-            console.log(err);
-            res.send({err:-1,msg:'find error',data:null})
-        })
-})
+// Router.post('/findDiseaseByKw',(req,res)=>{
+//     let {keyword,pagesize,page} =req.body;
+//     let obj={};
+//     // Goods.find({name:{$regex:'肉'}})
+//     Disease.find({$or:[{diseaseId:{$regex:keyword}},{diseaseName:{$regex:keyword}},{diseaseMobile:{$regex:keyword}}]})
+//         .then((data)=>{
+//             // 获取总条数
+//             obj.total=data.length;
+//             return Disease.find({$or:[{diseaseId:{$regex:keyword}},{diseaseName:{$regex:keyword}},{diseaseMobile:{$regex:keyword}}]}).limit(Number(pagesize)).skip((Number(page)-1)*Number(pagesize));
+//         })
+//         .then((data)=>{
+//             obj.diseaseList=data;
+//             res.send({err:0,msg:'find success',data:obj})
+//         })
+//         .catch((err)=>{
+//             console.log(err);
+//             res.send({err:-1,msg:'find error',data:null})
+//         })
+// })
 
 
 /**
@@ -184,17 +185,17 @@ Router.post('/findDiseaseByKw',(req,res)=>{
  * @apiSuccess {String} msg  结果信息
  * @apiSuccess {String} data  返回数据
  */
-Router.post("/updateDiseaseInfo",(req,res)=>{
-    let {diseaseId,diseaseName, diseaseMobile,diseaseType, diseaseSex, diseaseBirthday, diseaseAllergyDrugs,diseaseJob} = req.body;
-    Disease.updateOne({diseaseId:diseaseId},{$set:{diseaseName, diseaseType,diseaseMobile, diseaseSex, diseaseBirthday, diseaseAllergyDrugs,diseaseJob}})
-        .then((data)=>{
-            res.send({err:0,msg:'update success',data:null})
-        })
-        .catch((err)=>{
-            console.log(err);
-            res.send({err:-1,msg:'update error',data:null})
-        })
-});
+// Router.post("/updateDiseaseInfo",(req,res)=>{
+//     let {diseaseId,diseaseName, diseaseMobile,diseaseType, diseaseSex, diseaseBirthday, diseaseAllergyDrugs,diseaseJob} = req.body;
+//     Disease.updateOne({diseaseId:diseaseId},{$set:{diseaseName, diseaseType,diseaseMobile, diseaseSex, diseaseBirthday, diseaseAllergyDrugs,diseaseJob}})
+//         .then((data)=>{
+//             res.send({err:0,msg:'update success',data:null})
+//         })
+//         .catch((err)=>{
+//             console.log(err);
+//             res.send({err:-1,msg:'update error',data:null})
+//         })
+// });
 
 
 /**

@@ -12,6 +12,7 @@ Array.prototype.remove = function(val) {
 function add0(m){return m<10?'0'+m:m }
 function timeStampToDate(shijianchuo)
 {
+    console.log(shijianchuo)
     var time = new Date(shijianchuo);
     var y = time.getFullYear();
     var m = time.getMonth()+1;

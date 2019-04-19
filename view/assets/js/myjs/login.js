@@ -8,6 +8,7 @@ $('#login-btn').on('click',()=>{
     $.post(url,{jobNumber,userPassword},(res)=>{
         if(res.data!== null){
             let userLoginState = {
+                jobNumber:jobNumber,
                 userName:res.data.userName,
                 userType:res.data.userType,
             }

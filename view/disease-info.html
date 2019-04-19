@@ -106,7 +106,7 @@
                 <ul class="am-dropdown-content">
                     <li><a href="#"><span class="am-icon-bell-o"></span> 资料</a></li>
                     <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li>
-                    <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
+                    <li><a href="./login.html"><span class="am-icon-power-off"></span> 退出</a></li>
                 </ul>
             </li>
             <li><a href="./login.html" class="tpl-header-list-link"><span
@@ -498,14 +498,45 @@
                                                 <div class="tpl-fz-ml">
                                                     <div class="portlet-input input-small input-inline">
                                                         <div class="input-icon center">
-                                                            <i class="am-icon-search"></i>
-                                                            <input id="find-medicine-name-btn" type="text" class="form-control form-control-solid" placeholder="查找药典信息..." onkeyup="selectMedicineInfo()">
+                                                            <i class="am-icon-search" onclick="searchFindByKw()"></i>
+                                                            <input id="find-medicine-name-btn" type="text" class="form-control form-control-solid" placeholder="查找药典信息..." onkeyup="selectMedicineInfo()" onblur="hideFindResByKw()">
+                                                        </div>
+                                                        <ul class="find-res"></ul>
+                                                        <table class="user-choose-res am-u-sm-9 am-table am-table-striped am-table-hover table-main">
+                                                            <tbody>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                    <h5>已选择的药物：</h5>
+                                                    <table class="am-u-sm-9 am-table am-table-striped am-table-hover table-main">
+                                                        <tbody class="chooseCureDiseaseList">
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                        <div id="histroy-medicine">
+                                            <div class="edit-history-box">
+                                                <div class="edit-history-mask"></div>
+                                                <div class="edit-history-content">
+                                                    <h6>你选择的药物为：</h6>
+                                                    <div>
+                                                        <p>
+                                                            <span id="history-medicine-name"></span>
+                                                            <input id="history-medicine-num" type="number" placeholder="数量...">
+                                                        </p>
+                                                        <div>
+                                                            <input type="button" value="返回" id="goback-choose-edit-histroy">
+                                                            <input type="button" value="选择" id="choose-edit-histroy">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div id="histroy-medicine">
                                             <table class="am-u-sm-9 am-table am-table-striped am-table-hover table-main">
                                                 <thead>
                                                 <tr>
@@ -516,12 +547,6 @@
                                                 </tr>
                                                 </thead>
                                                 <tbody id="histroy-cureDiseaseList">
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td>阿莫西林</td>
-                                                    <td>1</td>
-                                                    <td><input type="button" value="编辑" class="choose-btn"></td>
-                                                </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -556,7 +581,7 @@
                                                     <th class="table-set">操作</th>
                                                 </tr>
                                                 </thead>
-                                                <tbody id="chooseCureDiseaseList">
+                                                <tbody class="chooseCureDiseaseList">
 
                                                 </tbody>
                                             </table>
@@ -579,7 +604,7 @@
 
                             <div class="am-form-group">
                                 <div class="am-u-sm-9 am-u-sm-push-3">
-                                    <button type="button" class="am-btn am-btn-primary">保存</button>
+                                    <button type="button" class="am-btn am-btn-primary" id="seve-prescribing-drugs-btn">提交</button>
                                     <button id="see-diseasei-info-back" type="button" class="am-btn am-btn-secondary">返回</button>
 
                                 </div>

@@ -35,6 +35,10 @@ app.use("/disease",adminRouter);
 const medicineRouter = require('./router/medicineAdmin.js');
 app.use("/medicine",medicineRouter);
 
+// 治病的信息【开处方的信息】
+const cureDiseaseRouter = require('./router/cureDiseaseAdmin.js');
+app.use("/cureDisease",cureDiseaseRouter);
+
 
 app.listen(3000,()=>{
     console.log("server start in port " + 3000)
