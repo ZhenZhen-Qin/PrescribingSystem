@@ -7,7 +7,7 @@ let cureDiseaseSchema = mongoose.Schema({
     attendingDoctorName:{type:String}, //主治医生姓名
     jobNumber:{type:String}, //主治医生工号
     //对象转字符串，开药，这次看病开的处方
-    prescribingDrugs:{type:String},
+    prescribingDrugs:{type:String}, // 所开的处方
     // {
     // historicalDrugs:[{
     //   time:"", 时间
