@@ -302,7 +302,6 @@ let searchFindByKw = ()=>{
             })
             $('.user-choose-res').html(str);
         }});
-
 }
 
 // 历史药物的查询
