@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c124e46-c935-4293-a41e-b493fdea3b65" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/view/assets/js/myjs/disease.js" beforeDir="false" afterPath="$PROJECT_DIR$/view/assets/js/myjs/disease.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apidoc/api_data.js" beforeDir="false" afterPath="$PROJECT_DIR$/apidoc/api_data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apidoc/api_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/apidoc/api_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apidoc/api_project.js" beforeDir="false" afterPath="$PROJECT_DIR$/apidoc/api_project.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apidoc/api_project.json" beforeDir="false" afterPath="$PROJECT_DIR$/apidoc/api_project.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -15,23 +19,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.48309976">
+    <splitter split-orientation="horizontal" split-proportion="0.5092817">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="CureDisease.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mongo/model/CureDisease.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
+                <state relative-caret-position="198">
                   <caret line="9" column="20" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Medicine.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Medicine.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/mongo/model/Medicine.js">
               <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="220">
+                  <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mongo/model/User.js">
+              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="176">
-                  <caret line="8" column="16" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="16" />
+                  <caret line="8" column="14" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -71,7 +84,7 @@
           <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/register.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="83">
+                <state relative-caret-position="1628">
                   <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
                   <folding>
                     <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -80,29 +93,20 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="medicineAdmin.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="subject-test.jsp" pinned="false" current-in-tab="false">
+            <entry file="file://$USER_HOME$/Desktop/subject-test.jsp">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="330">
+                  <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="medicineAdmin.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/router/medicineAdmin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="567">
-                  <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="common.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/common.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/login.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+                <state relative-caret-position="1694">
+                  <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
                 </state>
               </provider>
             </entry>
@@ -110,7 +114,7 @@
           <file leaf-file-name="diseaseAdmin.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/router/diseaseAdmin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="408">
+                <state relative-caret-position="1760">
                   <caret line="212" selection-start-line="212" selection-end-line="212" />
                   <folding>
                     <element signature="e#265#817#0" />
@@ -133,8 +137,8 @@
           <file leaf-file-name="Disease.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/mongo/model/Disease.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="198">
-                  <caret line="9" column="23" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="23" />
+                <state relative-caret-position="110">
+                  <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -143,11 +147,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="disease.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="disease.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/disease.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-7162">
-                  <caret line="282" selection-start-line="282" selection-end-line="304" selection-end-column="1" />
+                <state relative-caret-position="484">
+                  <caret line="303" column="12" selection-start-line="303" selection-start-column="12" selection-end-line="303" selection-end-column="12" />
                   <folding>
                     <element signature="e#6#13#1" expanded="true" />
                   </folding>
@@ -155,25 +159,16 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="admin.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/view/admin.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="182" column="37" selection-start-line="182" selection-start-column="37" selection-end-line="182" selection-end-column="37" />
+                <state relative-caret-position="-1213">
+                  <caret line="261" column="28" selection-start-line="261" selection-start-column="28" selection-end-line="261" selection-end-column="28" />
                   <folding>
                     <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/mongo/model/User.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="8" column="14" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="14" />
                 </state>
               </provider>
             </entry>
@@ -190,7 +185,7 @@
           <file leaf-file-name="cureDiseaseAdmin.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/router/cureDiseaseAdmin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
+                <state relative-caret-position="550">
                   <caret line="25" selection-start-line="25" selection-end-line="38" selection-end-column="3" />
                 </state>
               </provider>
@@ -199,8 +194,8 @@
           <file leaf-file-name="userAdmin.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/router/userAdmin.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="173">
-                  <caret line="60" column="59" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="59" />
+                <state relative-caret-position="704">
+                  <caret line="60" column="59" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="59" />
                   <folding>
                     <element signature="e#258#764#0" />
                     <element signature="e#1342#1638#0" />
@@ -455,24 +450,26 @@
       <workItem from="1554890100144" duration="84879000" />
       <workItem from="1555375825531" duration="26721000" />
       <workItem from="1555754336165" duration="11003000" />
+      <workItem from="1556241049583" duration="4292000" />
+      <workItem from="1556610984807" duration="4342000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162185000" />
+    <option name="totallyTimeSpent" value="170819000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1453" height="873" extended-state="7" />
+    <frame x="-6" y="-6" width="1453" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15705352" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13898541" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3298292" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2996058" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -496,13 +493,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3608">
@@ -690,18 +680,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="182" column="37" selection-start-line="182" selection-start-column="37" selection-end-line="182" selection-end-column="37" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/disease-info.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2376">
@@ -730,48 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mongo/model/Disease.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mongo/model/CureDisease.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mongo/model/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="14" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mongo/model/Medicine.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/router/userAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="60" column="59" lean-forward="true" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="59" />
+        <state relative-caret-position="704">
+          <caret line="60" column="59" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="59" />
           <folding>
             <element signature="e#258#764#0" />
             <element signature="e#1342#1638#0" />
@@ -792,24 +732,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/router/cureDiseaseAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
+        <state relative-caret-position="550">
           <caret line="25" selection-start-line="25" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/disease.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7162">
-          <caret line="282" selection-start-line="282" selection-end-line="304" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#13#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/router/diseaseAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
+        <state relative-caret-position="1760">
           <caret line="212" selection-start-line="212" selection-end-line="212" />
           <folding>
             <element signature="e#265#817#0" />
@@ -830,8 +760,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/router/medicineAdmin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+        <state relative-caret-position="1694">
+          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1628">
+          <caret line="74" column="30" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#6;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/subject-test.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongo/model/CureDisease.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/assets/js/myjs/disease.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="303" column="12" selection-start-line="303" selection-start-column="12" selection-end-line="303" selection-end-column="12" />
+          <folding>
+            <element signature="e#6#13#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongo/model/Disease.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongo/model/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="14" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1213">
+          <caret line="261" column="28" selection-start-line="261" selection-start-column="28" selection-end-line="261" selection-end-column="28" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mongo/model/Medicine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

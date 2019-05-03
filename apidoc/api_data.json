@@ -65,362 +65,6 @@
   },
   {
     "type": "post",
-    "url": "/Medicine/findMedicineInfoByAll",
-    "title": "findMedicineInfoByAll",
-    "name": "findMedicineInfoByAll",
-    "group": "Medicine",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "pagesize",
-            "description": ""
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "page",
-            "description": ""
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "router/medicineAdmin.js",
-    "groupTitle": "Medicine"
-  },
-  {
-    "type": "post",
-    "url": "/Medicine/findMedicineInfoByOne",
-    "title": "findMedicineInfoByOne",
-    "name": "findMedicineInfoByOne",
-    "group": "Medicine",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineId",
-            "description": "<p>病患身份证</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "router/medicineAdmin.js",
-    "groupTitle": "Medicine"
-  },
-  {
-    "type": "post",
-    "url": "/Medicine/findMedicineInfoByType",
-    "title": "findMedicineInfoByType",
-    "name": "findMedicineInfoByType",
-    "group": "Medicine",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineType",
-            "description": "<p>病患所属类别ID</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "router/medicineAdmin.js",
-    "groupTitle": "Medicine"
-  },
-  {
-    "type": "post",
-    "url": "/Medicine/removeMedicineInfo",
-    "title": "removeMedicineInfo",
-    "name": "removeMedicineInfo",
-    "group": "Medicine",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineId",
-            "description": "<p>病患身份证</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "router/medicineAdmin.js",
-    "groupTitle": "Medicine"
-  },
-  {
-    "type": "post",
-    "url": "/Medicine/removeMedicineInfoMany",
-    "title": "removeMedicineInfoMany",
-    "name": "removeMedicineInfoMany",
-    "group": "Medicine",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "optional": false,
-            "field": "MedicineIdArr",
-            "description": "<p>病患Id数组</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "router/medicineAdmin.js",
-    "groupTitle": "Medicine"
-  },
-  {
-    "type": "post",
-    "url": "/Medicine/updateMedicineInfo",
-    "title": "updateMedicineInfo",
-    "name": "updateMedicineInfo",
-    "group": "Medicine",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineId",
-            "description": "<p>病患id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineName",
-            "description": "<p>病患姓名</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineMobile",
-            "description": "<p>病患手机</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "MedicineSex",
-            "description": "<p>病患性别</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "MedicineType",
-            "description": "<p>病患类别</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineBirthday",
-            "description": "<p>病患出生年月</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineAllergyDrugs",
-            "description": "<p>过敏药物</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "MedicineJob",
-            "description": "<p>病患职业</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "router/medicineAdmin.js",
-    "groupTitle": "Medicine"
-  },
-  {
-    "type": "post",
     "url": "/cureDisease/addCureDiseaseInfo",
     "title": "addCureDiseaseInfo",
     "name": "addCureDiseaseInfo",
@@ -467,8 +111,79 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "attendingDoctorMobile",
-            "description": "<p>主治医生电话</p>"
+            "field": "jobNumber",
+            "description": "<p>主治医生工号</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "prescribingDrugs",
+            "description": "<p>处方</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "router/cureDiseaseAdmin.js",
+    "groupTitle": "cureDisease"
+  },
+  {
+    "type": "post",
+    "url": "/cureDisease/findCureDiseaseByAll",
+    "title": "findCureDiseaseByAll",
+    "name": "findCureDiseaseByAll",
+    "group": "cureDisease",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "pagesize",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "page",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "diseaseId",
+            "description": ""
           }
         ]
       }
@@ -790,9 +505,9 @@
   },
   {
     "type": "post",
-    "url": "/disease/findDiseaseInfoByAll",
-    "title": "findDiseaseInfoByAll",
-    "name": "findDiseaseInfoByAll",
+    "url": "/disease/findDiseaseInfoByOne",
+    "title": "findDiseaseInfoByOne",
+    "name": "findDiseaseInfoByOne",
     "group": "disease",
     "parameter": {
       "fields": {
@@ -801,15 +516,8 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "pagesize",
-            "description": ""
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "page",
-            "description": ""
+            "field": "diseaseId",
+            "description": "<p>病患身份证</p>"
           }
         ]
       }
@@ -897,9 +605,9 @@
   },
   {
     "type": "post",
-    "url": "/disease/findDiseaseInfoByOne",
-    "title": "findDiseaseInfoByOne",
-    "name": "findDiseaseInfoByOne",
+    "url": "/disease/findDiseaseInfoByType",
+    "title": "findDiseaseInfoByType",
+    "name": "findDiseaseInfoByType",
     "group": "disease",
     "parameter": {
       "fields": {
@@ -908,8 +616,8 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "diseaseId",
-            "description": "<p>病患身份证</p>"
+            "field": "diseaseType",
+            "description": "<p>病患所属类别ID</p>"
           }
         ]
       }
@@ -942,7 +650,7 @@
       }
     },
     "version": "0.0.0",
-    "filename": "router/cureDiseaseAdmin.js",
+    "filename": "router/diseaseAdmin.js",
     "groupTitle": "disease"
   },
   {
@@ -997,106 +705,6 @@
   },
   {
     "type": "post",
-    "url": "/disease/findDiseaseInfoByType",
-    "title": "findDiseaseInfoByType",
-    "name": "findDiseaseInfoByType",
-    "group": "disease",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "diseaseType",
-            "description": "<p>病患所属类别ID</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "router/diseaseAdmin.js",
-    "groupTitle": "disease"
-  },
-  {
-    "type": "post",
-    "url": "/disease/removeDiseaseInfo",
-    "title": "removeDiseaseInfo",
-    "name": "removeDiseaseInfo",
-    "group": "disease",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "diseaseId",
-            "description": "<p>病患身份证</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "fields": {
-        "Success 200": [
-          {
-            "group": "Success 200",
-            "type": "Number",
-            "optional": false,
-            "field": "err",
-            "description": "<p>错误码 0：ok  -1 失败</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "msg",
-            "description": "<p>结果信息</p>"
-          },
-          {
-            "group": "Success 200",
-            "type": "String",
-            "optional": false,
-            "field": "data",
-            "description": "<p>返回数据</p>"
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "router/diseaseAdmin.js",
-    "groupTitle": "disease"
-  },
-  {
-    "type": "post",
     "url": "/disease/removeDiseaseInfo",
     "title": "removeDiseaseInfo",
     "name": "removeDiseaseInfo",
@@ -1143,6 +751,56 @@
     },
     "version": "0.0.0",
     "filename": "router/cureDiseaseAdmin.js",
+    "groupTitle": "disease"
+  },
+  {
+    "type": "post",
+    "url": "/disease/removeDiseaseInfo",
+    "title": "removeDiseaseInfo",
+    "name": "removeDiseaseInfo",
+    "group": "disease",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "diseaseId",
+            "description": "<p>病患身份证</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "err",
+            "description": "<p>错误码 0：ok  -1 失败</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "msg",
+            "description": "<p>结果信息</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "data",
+            "description": "<p>返回数据</p>"
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "router/diseaseAdmin.js",
     "groupTitle": "disease"
   },
   {
